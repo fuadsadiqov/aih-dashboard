@@ -1,0 +1,56 @@
+.trade{
+    display: flex;
+    gap: 13px;
+    table{
+        width: 100%;
+        margin: 20px 0;
+        border-collapse: collapse;
+        box-shadow: 3px 10px 21px -18px rgba(0,0,0,0.75);
+    
+        thead{
+            background-color: #eff4fc;
+            height: 30px;
+            font-size: 15px;
+            font-weight: 200;
+            th{
+                &:first-child{
+                    border-radius: 6px 0 0 0;
+                }
+                &:last-child{
+                    border-radius: 0 6px 0 0;
+                }
+            }
+        }
+        tbody{
+            width: 100%;
+            background-color: #FFF;
+            font-size: 14px;
+            font-weight: 500;
+            height: 45px;
+            padding: 0 20px;
+        }
+        .trade-up{
+            transform: translateY(6px);
+            color: hsl(138.86deg 31.82% 56.86%);
+        }
+        .trade-down{
+            transform: translateY(6px);
+            color: hsl(339.39deg 44.8% 43.33%);
+        }
+        &::after{
+            content: "monthly | yearly cumulative";
+            position: absolute;
+            background-color: #eff4fc;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 0 0 20px 0;
+        }
+    }
+    .employees{
+        width: max-content; 
+        &::after{
+            content: "actual | per staff schedule";
+        }
+    }
+}

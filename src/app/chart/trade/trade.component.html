@@ -1,0 +1,49 @@
+<div class="trade">
+    <table>
+        <thead>
+             <tr>
+                 <th>Cargo volume (tons)</th>
+                 <th>Import</th>
+                 <th>Export</th>
+                 <th>Transit</th>
+                 <th>Internal</th>
+                 <th>Passangers</th>
+             </tr>
+         </thead>
+        <tbody>
+            <tr>
+                <td *ngFor="let item of trades">
+                    <span>{{item.past }} k</span>
+                    <mat-icon class="trade-up" *ngIf="item.pastPercent > 0">arrow_drop_up</mat-icon>
+                    <mat-icon class="trade-down" *ngIf="item.pastPercent < 0">arrow_drop_down</mat-icon>
+                    <span>%{{item.pastPercent | number }}</span> | 
+                    <span>{{item.current }} k</span>
+                    <mat-icon class="trade-up" *ngIf="item.pastPercent > 0">arrow_drop_up</mat-icon>
+                    <mat-icon class="trade-down" *ngIf="item.pastPercent < 0">arrow_drop_down</mat-icon>
+                    <span>%{{item.currentPercent | number }}</span>
+                </td>
+            </tr>
+        </tbody>
+     </table>
+    <table class="employees">
+        <thead>
+             <tr>
+                 <th>Employees</th>
+             </tr>
+         </thead>
+        <tbody>
+            <tr>
+                <td *ngFor="let item of employees">
+                    <span>{{item.past }} k</span>
+                    <mat-icon class="trade-up" *ngIf="item.pastPercent > 0">arrow_drop_up</mat-icon>
+                    <mat-icon class="trade-down" *ngIf="item.pastPercent < 0">arrow_drop_down</mat-icon>
+                    <span>%{{item.pastPercent | number }}</span> | 
+                    <span>{{item.current }} k</span>
+                    <mat-icon class="trade-up" *ngIf="item.pastPercent > 0">arrow_drop_up</mat-icon>
+                    <mat-icon class="trade-down" *ngIf="item.pastPercent < 0">arrow_drop_down</mat-icon>
+                    <span>%{{item.currentPercent | number }}</span>
+                </td>
+            </tr>
+        </tbody>
+     </table>
+</div>
