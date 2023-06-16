@@ -8,7 +8,12 @@ import { MainComponent } from './main/main.component';
 
 // Angular Material
 import { MatIconModule } from '@angular/material/icon';
-import { TradeComponent } from './trade/trade.component'
+import { TradeComponent } from './trade/trade.component';
+import { OperationalComponent } from './operational/operational.component';
+import { CreditorComponent } from './creditor/creditor.component';
+import { RollingStockComponent } from './rolling-stock/rolling-stock.component';
+import { RemainingDebtComponent } from './remaining-debt/remaining-debt.component';
+import { RevenueBreakdownComponent } from './revenue-breakdown/revenue-breakdown.component'
 
 
 
@@ -18,7 +23,12 @@ import { TradeComponent } from './trade/trade.component'
     HeaderComponent,
     ChartComponent,
     MainComponent,
-    TradeComponent
+    TradeComponent,
+    OperationalComponent,
+    CreditorComponent,
+    RollingStockComponent,
+    RemainingDebtComponent,
+    RevenueBreakdownComponent
   ],
   imports: [
     CommonModule,

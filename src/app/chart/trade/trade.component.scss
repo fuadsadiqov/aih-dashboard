@@ -50,6 +50,7 @@
     .employees{
         width: max-content; 
         &::after{
+            transform: translateY(0);
             content: "actual | per staff schedule";
         }
     }
