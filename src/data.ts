@@ -79,25 +79,29 @@ export const data = [
                     {
                         legend: 'staff related costs',
                         data: 55,
-                        backgroundColor: 'hsl(223.97deg 64.6% 55.69%)'
+                        backgroundColor: 'green'
                     },
                     {
                         legend: 'utility',
                         data: 16,
-                        backgroundColor: '#5bb5d1'
+                        backgroundColor: 'blue'
                     },
                     {
                         legend: 'taxes',
                         data: 6,
-                        backgroundColor: '#839be5'
+                        backgroundColor: 'lightgreen'
                     },
                     {
                         legend: 'fuel',
                         data: 20,
-                        backgroundColor: 'hsl(138.86deg 31.82% 56.86%)'
+                        backgroundColor: 'gray'
                     }
                 ]
             },
         ]
-    }
+    },
+    {
+        name: "Creditor's balance",
+        value: [25, 10, -8, 5, -20]
+    },
 ]

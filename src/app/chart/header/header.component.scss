@@ -1,7 +1,7 @@
 .header{
-    padding: 0 30px;
+    padding: 0 3rem;
     background-color: #FFFF;
-    box-shadow: 0 1px 0 0 rgba(0,0,0,0.1);
+    box-shadow: 0 0.1rem 0 0 rgba(0,0,0,0.1);
     .header-top{
         display: flex;
         justify-content: space-between;
@@ -10,24 +10,24 @@
             display: flex;
             align-items: center;
             span{
-                font-size: 22px;
-                margin-left: 14px;
+                font-size: 2.2rem;
+                margin-left: 1.4rem;
                 font-weight: 500;
             }
             img{
-                width: 85px;
+                width: 8rem;
             }
         }
         .top-right{
             display: flex;
-            gap: 25px;
+            gap: 2.5rem;
             align-items: center;
             span{
-                font-size: 20px;
+                font-size: 2rem;
             }
             .account{
-                width: 35px;
-                height: 35px;
+                width: 3.5rem;
+                height: 3.5rem;
                 border-radius: 50%;
                 background-color: #456CD9;
             }
@@ -37,12 +37,12 @@
         ul{
             display: flex;
             align-items: center;
-            gap: 20px;
-            padding-bottom: 20px;
+            gap: 2rem;
+            padding-bottom: 2rem;
             li{
                 display: flex;
                 align-items: center;
-                font-size: 17px;
+                font-size: 1.7rem;
                 font-weight: 500;
                 cursor: pointer;
                 &:hover{

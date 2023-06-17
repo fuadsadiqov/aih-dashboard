@@ -11,12 +11,15 @@
        <div class="pie">
         <div class="inflow-pie">
                 <h3>Operational inflow <span>k₼ | yearly</span></h3>
-                <canvas baseChart class="chart"
+                <div class="charts">
+                        <span>45,456</span>
+                        <canvas baseChart class="chart"
                         [data]="doughnutChartData"
                         [options]="doughnutChartOptions"
                         [legend]="barChartLegend"
                         [type]="doughnutChartType">
                 </canvas>
+                </div>
                <div class="legends">
                 <ng-container *ngFor="let item of firstPieChartLabel">
                         <div class="legend">
@@ -28,15 +31,23 @@
         </div>
         <div class="outflow-pie">
                 <h3>Operational outflow <span>k₼ | yearly</span></h3>
-                <canvas baseChart class="chart"
-                [data]="doughnutChartData2"
-                [options]="doughnutChartOptions"
-                [legend]="barChartLegend"
-                [type]="doughnutChartType">
-        </canvas>
-        <ng-container *ngFor="let item of firstPieChartLabel">
-                <span>{{item.legend}}</span>
-        </ng-container>
+                <div class="charts">
+                        <span>21,529</span>
+                        <canvas baseChart class="chart"
+                        [data]="doughnutChartData2"
+                        [options]="doughnutChartOptions"
+                        [legend]="barChartLegend"
+                        [type]="doughnutChartType">
+                        </canvas>
+                </div>
+        <div class="legends">
+                <ng-container *ngFor="let item of secondPieChartLabel">
+                        <div class="legend">
+                                <div class="legend-box" ngClass={{item.backgroundColor}}></div>
+                                <span>{{item.legend}}</span>
+                        </div>
+                </ng-container>
+               </div>
         </div>
        </div>
 </div>

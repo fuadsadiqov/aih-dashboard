@@ -1,7 +1,5 @@
 import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
-import { AccumulationChartComponent, AccumulationChart, AccumulationDataLabel, IAccLoadedEventArgs, AccumulationTheme, IPointRenderEventArgs } from '@syncfusion/ej2-angular-charts';
-import { Browser } from '@syncfusion/ej2-base';
-import { ChartConfiguration, ChartData, ChartEvent, ChartOptions, ChartType } from 'chart.js';
+import { ChartConfiguration, ChartData, ChartType } from 'chart.js';
 import { BaseChartDirective } from 'ng2-charts';
 import { data } from 'src/data';
 import DataLabelsPlugin from 'chartjs-plugin-datalabels';
@@ -15,6 +13,7 @@ export class OperationalComponent{
   private blue: string = 'hsl(223.97deg 64.6% 55.69%)'
   private green: string = 'hsl(138.86deg 31.82% 56.86%)'
   private red: string  = 'hsl(339.39deg 44.8% 43.33%)'
+  
   private chartData: any = data.find((item: any) => item.name === "Cash movement")?.value
   public firstPieChart: any = data.find((item: any) => item.name === "Operational")?.value[0]
   public secondPieChart: any = data.find((item: any) => item.name === "Operational")?.value[1]
