@@ -1,3 +1,38 @@
-.chart-box{
-    width: 35%;
+.operational{
+    padding-top: 2rem;
+    background-color: #FFF;
+    .chart-box{
+        width: 25%;
+    }
+    h3{
+        font-weight: 600;
+        span{
+            color: #CCC;
+        }
+    }
+    .pie{
+        display: flex;
+        .inflow-pie,
+        .outflow-pie{
+            width: 10%;
+            margin-right: 30px;
+        }
+    }
+    .legend{
+        display: flex;
+        gap: 10px;
+        .legend-box{
+            width: 20px;
+            height: 20px;
+        }
+        .blue{
+            background-color: hsl(223.97deg 64.6% 55.69%);
+        }
+        .gray{
+            background-color: #5bb5d1;
+        }
+        .lightgreen{
+            background-color: #839be5;
+        }
+    }
 }

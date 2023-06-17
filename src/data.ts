@@ -46,4 +46,58 @@ export const data = [
             }
         ]
     },
+    {
+        name: "Cash movement",
+        value: [15, -10, 25, -8, 20, 12, 6]
+    },
+    {
+        name: "Operational",
+        value: [
+            {
+                name: 'Inflow',
+                value: [
+                    {
+                        legend: 'cargo',
+                        data: 87,
+                        backgroundColor: 'blue'
+                    },
+                    {
+                        legend: 'passangers',
+                        data: 5,
+                        backgroundColor: 'gray'
+                    },
+                    {
+                        legend: 'other cash inflows',
+                        data: 6,
+                        backgroundColor: 'lightgreen'
+                    }
+                ]
+            },
+            {
+                name: 'Outflow',
+                value: [
+                    {
+                        legend: 'staff related costs',
+                        data: 55,
+                        backgroundColor: 'hsl(223.97deg 64.6% 55.69%)'
+                    },
+                    {
+                        legend: 'utility',
+                        data: 16,
+                        backgroundColor: '#5bb5d1'
+                    },
+                    {
+                        legend: 'taxes',
+                        data: 6,
+                        backgroundColor: '#839be5'
+                    },
+                    {
+                        legend: 'fuel',
+                        data: 20,
+                        backgroundColor: 'hsl(138.86deg 31.82% 56.86%)'
+                    }
+                ]
+            },
+        ]
+    }
 ]

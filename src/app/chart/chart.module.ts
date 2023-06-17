@@ -15,8 +15,6 @@ import { RollingStockComponent } from './rolling-stock/rolling-stock.component';
 import { RemainingDebtComponent } from './remaining-debt/remaining-debt.component';
 import { RevenueBreakdownComponent } from './revenue-breakdown/revenue-breakdown.component'
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
