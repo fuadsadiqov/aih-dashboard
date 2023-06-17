@@ -104,4 +104,49 @@ export const data = [
         name: "Creditor's balance",
         value: [25, 10, -8, 5, -20]
     },
+    {
+        name: 'Remaining debt',
+        value: [
+            {
+                name: "first",
+                value: [
+                    {
+                        legend: 'loans from gov',
+                        data: 56,
+                        backgroundColor: 'red'
+                    },
+                    {
+                        legend: 'gov guaranteed',
+                        data: 41,
+                        backgroundColor: 'blue'
+                    },
+                    {
+                        legend: 'loans without government gurantee',
+                        data: 3,
+                        backgroundColor: 'gray'
+                    },
+                ]
+            },
+            {
+                name: "first",
+                value: [
+                    {
+                        legend: 'credit suisse',
+                        data: 20,
+                        backgroundColor: 'green'
+                    },
+                    {
+                        legend: 'societe generate',
+                        data: 42,
+                        backgroundColor: 'blue'
+                    },
+                    {
+                        legend: 'HSBC bank',
+                        data: 38,
+                        backgroundColor: 'lightgreen'
+                    },
+                ]
+            }
+        ]
+    },
 ]

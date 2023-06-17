@@ -1,8 +1,11 @@
 .main{
-    padding: 1rem 3rem 0 3rem;
+    padding: 1.5rem 3rem 0 3rem;
     .flex{
         display: flex;
         gap: 2rem;
+        .flex-1{
+            flex: 1;
+        }
     }
     .legend{
         display: flex;

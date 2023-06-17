@@ -1,0 +1,54 @@
+.remaining-pie{
+    margin-top: 1rem;
+    display: flex;
+    // width: 40rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #FFF;
+    box-shadow: 0.3rem 1rem 2.1rem -1.8rem rgba(0,0,0,0.75);
+    gap: 1rem;
+    .legends{
+        display: grid;
+    padding-top: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 0.9rem;
+    gap: 0.5rem;
+    .legend{
+        display: flex;
+        gap: 0.5rem;
+        .legend-box{
+            width: 1.4rem;
+            height: 1.4rem;
+            border-radius: 50%;
+        }
+        .blue{
+            background-color: hsl(223.97deg 64.6% 55.69%);
+        }
+        .gray{
+            background-color: #5bb5d1;
+        }
+        .lightgreen{
+            background-color: #839be5;
+        }
+        .green{
+            background-color: hsl(138.86deg 31.82% 56.86%);
+        }
+        .red{
+            background-color: hsl(339.39deg 44.8% 43.33%);
+        }
+    }
+    }
+    .charts{
+        width: 35%;
+        position: relative;
+        span{
+            font-weight: 600;
+            font-size: 1.5rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
