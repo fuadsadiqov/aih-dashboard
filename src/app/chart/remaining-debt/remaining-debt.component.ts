@@ -18,10 +18,7 @@ export class RemainingDebtComponent {
   public secondPieChart: any = data.find((item: any) => item.name === "Remaining debt")?.value[1]
   private secondPieChartData = this.secondPieChart.value.map((item: any) => item.data)
   public secondPieChartLabel = this.secondPieChart.value.map((item: any) => item)
-  constructor(){
-    console.log(this.firstPieChart);
-    
-  }
+
   // Donught chart
   public doughnutChartData: ChartData<'doughnut'> = {
     labels: [ 'cargo', 'passangers', 'other cash inflows' ],

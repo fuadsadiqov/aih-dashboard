@@ -1,1 +1,44 @@
-<p>rolling-stock works!</p>
+<div class="rolling">
+    <h3>Rolling stock and its utilization</h3>
+
+    <div class="table-wrapper">
+        <div class="table-item">
+            <h4>{{cargoData.name}}</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>stock</th>
+                        <th>rate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of cargoData.value">
+                        <td class="table-title">{{item.title}}</td>
+                        <td>{{item.data[0]}}</td>
+                        <td>{{item.data[1]}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+   <div class="table-item">
+    <h4>{{passangerData.name}}</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>stock</th>
+                    <th>rate</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of passangerData.value">
+                    <td class="table-title">{{item.title}}</td>
+                    <td>{{item.data[0]}}</td>
+                    <td>{{item.data[1]}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+   </div>
+</div>

@@ -149,4 +149,47 @@ export const data = [
             }
         ]
     },
+    {
+        name: 'Rolling stock',
+        value: [
+            {
+                name: "Cargo",
+                value: [
+                        {
+                            title: 'Wagons',
+                            data: [3232, 65]
+                        },
+                        {
+                            title: 'Main locomotives',
+                            data: [23, 70]
+                        },
+                        {
+                            title: 'Electro locomotives',
+                            data: [97, 51]
+                        },
+                        {
+                            title: 'Shunting locomotives',
+                            data: [67, 65]
+                        },
+                    ]
+            },
+            {
+                name: "Passanger",
+                value: [
+                        {
+                            title: 'Wagons',
+                            data: [213, 59]
+                        },
+                        {
+                            title: 'Locomotives',
+                            data: [15, 92]
+                        },
+                        {
+                            title: 'Trains',
+                            data: [13, 86]
+                        }
+                    ]
+            },
+        ]
+    }
 ]
