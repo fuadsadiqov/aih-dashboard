@@ -11,7 +11,6 @@ export class RollingStockComponent {
   public passangerData: any = this.commonData[1]
 
   constructor(){
-    console.log(this.passangerData);
     
   }
   

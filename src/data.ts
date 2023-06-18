@@ -191,5 +191,80 @@ export const data = [
                     ]
             },
         ]
+    },
+    {
+        name: 'Revenue breakdown',
+        value: [
+            {
+                name: 'Cargo',
+                data: [
+                    {
+                        label: 'transit',
+                        data: 43,
+                        color: 'blue'
+                    },
+                    {
+                        label: 'import',
+                        data: 26,
+                        color: 'gray'
+                    },
+                    {
+                        label: 'export',
+                        data: 22,
+                        color: 'lightgreen'
+                    },
+                    {
+                        label: 'internal',
+                        data: 9,
+                        color: 'green'
+                    },
+                ]
+            },
+            {
+                name: 'Passanger',
+                data: [
+                    {
+                        label: 'Abseron circular',
+                        data: 75,
+                        color: 'blue'
+                    },
+                    {
+                        label: 'regional',
+                        data: 25,
+                        color: 'gray'
+                    }
+                ]
+            },
+            {
+                name: 'Other',
+                data: [
+                    {
+                        label: 'transit',
+                        data: 32,
+                        color: 'blue'
+                    },
+                    {
+                        label: 'import',
+                        data: 32,
+                        color: 'lightgreen'
+                    },
+                    {
+                        label: 'export',
+                        data: 16,
+                        color: 'green'
+                    },
+                    {
+                        label: 'internal',
+                        data: 13,
+                        color: 'gray'
+                    },
+                    {
+                        label: 'internal',
+                        data: 7,
+                        color: 'blue'
+                    },
+                ]
+            }
+        ]
     }
 ]
