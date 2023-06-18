@@ -27,7 +27,6 @@ export class RevenueBreakdownComponent {
   public thirdPieChartLabel: any = this.thirdPieChart.data.map((item: any) => item.label)
   
   constructor(){
-    console.log(this.firstPieChart);
     
   }
   // Bar chart
@@ -101,6 +100,7 @@ export class RevenueBreakdownComponent {
   public doughnutChartOptions: any = {
     backgroundColor: [
       this.blue,
+      this.red,
       '#5bb5d1',
       '#839be5',
       this.green

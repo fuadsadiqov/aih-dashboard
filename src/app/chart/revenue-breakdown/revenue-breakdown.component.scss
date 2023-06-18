@@ -19,7 +19,7 @@
         justify-content: space-between;
         .inflow-pie,
         .outflow-pie{
-            max-width: 20rem;
+            max-width: 15rem;
             width: 30%;
             margin-right: 1rem;
         }
@@ -36,7 +36,11 @@
         }
     }
     .pieChartName{
+        display: flex;
+        justify-content: center;
+        text-align: center;
         background-color: #eff4fc;
         padding: 0.2rem 0.5rem;
+        margin-top: 1rem;
     }
 }
