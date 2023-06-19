@@ -1,0 +1,20 @@
+<div class="outflow-pie">
+    <h3>Operational outflow <span>k₼ | yearly</span></h3>
+    <div class="charts">
+            <span>21,529</span>
+            <canvas baseChart class="chart"
+            [data]="doughnutChartData2"
+            [options]="doughnutChartOptions"
+            [legend]="barChartLegend"
+            [type]="doughnutChartType">
+            </canvas>
+    </div>
+<div class="legends">
+    <ng-container *ngFor="let item of secondPieChartLabel">
+            <div class="legend">
+                    <div class="legend-box" ngClass={{item.backgroundColor}}></div>
+                    <span>{{item.legend}}</span>
+            </div>
+    </ng-container>
+   </div>
+</div>

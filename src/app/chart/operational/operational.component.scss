@@ -1,21 +1,10 @@
 .operational{
     padding: 0 1rem;
-    // max-width: 50rem;
     width: 100%;
-    padding-top: 2rem;
     background-color: #FFF;
     box-shadow: 0.3rem 1rem 2.1rem -1.8rem rgba(0,0,0,0.75);
     .chart-box{
         width: 100%;
-    }
-    h3{
-        display: inline-block;
-        text-align: left;
-        font-weight: 500;
-        font-size: 1.5rem;
-        span{
-            color: #CCC;
-        }
     }
     .pie{
         display: flex;

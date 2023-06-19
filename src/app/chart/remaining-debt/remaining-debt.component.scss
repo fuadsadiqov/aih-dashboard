@@ -1,23 +1,38 @@
 .remaining-pie{
     margin-top: 1rem;
-    display: flex;
-    width: 44rem;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     background-color: #FFF;
-    box-shadow: 0.3rem 1rem 2.1rem -1.8rem rgba(0,0,0,0.75);
-    gap: 1rem;
-    .charts{
-        width: 35%;
-        position: relative;
+    .wrapper{
+        display: flex;
+        width: 44rem;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        box-shadow: 0.3rem 1rem 2.1rem -1.8rem rgba(0,0,0,0.75);
+        gap: 1rem;
+        .charts{
+            width: 35%;
+            position: relative;
+            span{
+                font-weight: 600;
+                font-size: 1.5rem;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        .legends{
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+    }
+    h3{
+        padding: 1rem;
+        font-weight: 500;
+        text-align: left;
         span{
-            font-weight: 600;
-            font-size: 1.5rem;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            color: #CCC ;
         }
     }
 }

@@ -36,20 +36,17 @@
             transform: translateY(0.6rem);
             color: hsl(339.39deg 44.8% 43.33%);
         }
+    }
+    .employees{
+        flex: 1;
+        width: max-content; 
         &::after{
-            content: "monthly | yearly cumulative";
             position: absolute;
             background-color: #eff4fc;
             font-size: 1rem;
             font-weight: 500;
             padding: 0.5rem 1rem;
             border-radius: 0 0 2rem 0;
-        }
-    }
-    .employees{
-        flex: 1;
-        width: max-content; 
-        &::after{
             transform: translateY(0);
             content: "actual | per staff schedule";
         }

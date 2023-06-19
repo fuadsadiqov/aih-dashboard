@@ -1,0 +1,20 @@
+<div class="inflow-pie">
+    <h3>Operational inflow <span>k₼ | yearly</span></h3>
+    <div class="charts">
+            <span>45,456</span>
+            <canvas baseChart class="chart"
+            [data]="doughnutChartData"
+            [options]="doughnutChartOptions"
+            [legend]="barChartLegend"
+            [type]="doughnutChartType">
+    </canvas>
+    </div>
+   <div class="legends">
+    <ng-container *ngFor="let item of firstPieChartLabel">
+            <div class="legend">
+                    <div class="legend-box" ngClass={{item.backgroundColor}}></div>
+                    <span>{{item.legend}}</span>
+            </div>
+    </ng-container>
+   </div>
+</div>

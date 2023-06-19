@@ -13,7 +13,10 @@ import { OperationalComponent } from './operational/operational.component';
 import { CreditorComponent } from './creditor/creditor.component';
 import { RollingStockComponent } from './rolling-stock/rolling-stock.component';
 import { RemainingDebtComponent } from './remaining-debt/remaining-debt.component';
-import { RevenueBreakdownComponent } from './revenue-breakdown/revenue-breakdown.component'
+import { RevenueBreakdownComponent } from './revenue-breakdown/revenue-breakdown.component';
+import { CashComponent } from './operational/cash/cash.component';
+import { InflowComponent } from './operational/inflow/inflow.component';
+import { OutflowComponent } from './operational/outflow/outflow.component'
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { RevenueBreakdownComponent } from './revenue-breakdown/revenue-breakdown
     CreditorComponent,
     RollingStockComponent,
     RemainingDebtComponent,
-    RevenueBreakdownComponent
+    RevenueBreakdownComponent,
+    CashComponent,
+    InflowComponent,
+    OutflowComponent
   ],
   imports: [
     CommonModule,

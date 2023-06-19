@@ -2,10 +2,10 @@
     width: 100%;
     margin-top: 1rem;
     padding: 0 1rem;
-    padding-top: 2rem;
     background-color: #FFF;
     box-shadow: 0.3rem 1rem 2.1rem -1.8rem rgba(0,0,0,0.75);
     h3{
+        padding: 0.5rem;
         display: inline-block;
         text-align: left;
         font-weight: 500;
@@ -28,7 +28,7 @@
         position: relative;
         span{
             font-weight: 600;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             position: absolute;
             top: 50%;
             left: 50%;

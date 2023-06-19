@@ -48,7 +48,8 @@ export const data = [
     },
     {
         name: "Cash movement",
-        value: [15, -10, 25, -8, 20, 12, 6]
+        value: [15, -10, 25, -8, 20, 12, 6],
+        label: [['Opening','balance'], ['Operating', 'inflow'], ['Financing', 'activities'], ['Operating', 'outflow'], ['FX', 'difference'], ['Investing', 'activities'], ['Cash', 'balance']]
     },
     {
         name: "Operational",
@@ -200,22 +201,22 @@ export const data = [
                 data: [
                     {
                         label: 'transit',
-                        data: 43,
+                        data: 138874,
                         color: 'blue'
                     },
                     {
                         label: 'import',
-                        data: 26,
+                        data: 83970,
                         color: 'gray'
                     },
                     {
                         label: 'export',
-                        data: 22,
+                        data: 71052,
                         color: 'lightgreen'
                     },
                     {
                         label: 'internal',
-                        data: 9,
+                        data: 29066,
                         color: 'green'
                     },
                 ]
@@ -225,12 +226,12 @@ export const data = [
                 data: [
                     {
                         label: 'Abseron circular',
-                        data: 75,
+                        data: 2657,
                         color: 'blue'
                     },
                     {
                         label: 'regional',
-                        data: 25,
+                        data: 885   ,
                         color: 'gray'
                     }
                 ]
@@ -240,27 +241,27 @@ export const data = [
                 data: [
                     {
                         label: 'transit',
-                        data: 32,
+                        data: 7663,
                         color: 'blue'
                     },
                     {
                         label: 'import',
-                        data: 32,
+                        data: 7663,
                         color: 'lightgreen'
                     },
                     {
                         label: 'export',
-                        data: 16,
+                        data: 3831,
                         color: 'green'
                     },
                     {
                         label: 'internal',
-                        data: 13,
+                        data: 3113,
                         color: 'gray'
                     },
                     {
                         label: 'internal',
-                        data: 7,
+                        data: 1676,
                         color: 'blue'
                     },
                 ]
