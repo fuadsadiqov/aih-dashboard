@@ -27,6 +27,20 @@ export class InflowComponent {
 
   public doughnutChartType: ChartType = 'doughnut';
   public doughnutChartOptions: any = {
+    tooltips: {
+      callbacks: {
+        title: function(tooltipItem: { [x: string]: string | number; }[], data: { [x: string]: { [x: string]: any; }; }) {
+          return data['labels'][tooltipItem[0]['index']];
+        },
+        label: function(tooltipItem: { [x: string]: string | number; }, data: { [x: string]: { [x: string]: { [x: string]: any; }; }[]; }) {
+          return data['datasets'][0]['data'][tooltipItem['index']];
+        },
+        afterLabel: function(tooltipItem: { [x: string]: string | number; }, data: { [x: string]: any[]; }) {
+          var dataset = data['datasets'][0];
+          var percent = Math.round((dataset['data'][tooltipItem['index']] / dataset["_meta"][0]['total']) * 100)
+          return '(' + percent + '%)';
+        }
+      }},
     backgroundColor: [
       this.blue,
       '#5bb5d1',

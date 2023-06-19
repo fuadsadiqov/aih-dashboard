@@ -21,6 +21,7 @@ export class CashComponent {
 
   public barChartOptions: ChartConfiguration['options'] = {
     responsive: true,
+    aspectRatio: 2.5,
     // We use these empty structures as placeholders for dynamic theming.
     scales: {
       x: {

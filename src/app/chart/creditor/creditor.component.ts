@@ -13,12 +13,15 @@ export class CreditorComponent {
   private blue: string = 'hsl(223.97deg 64.6% 55.69%)'
   private green: string = 'hsl(138.86deg 31.82% 56.86%)'
   private red: string  = 'hsl(339.39deg 44.8% 43.33%)'
-  private chartData: any = data.find((item: any) => item.name === "Creditor's balance")?.value
+  public chartName: string = "Creditor's balance"
+  private chartData: any = data.find((item: any) => item.name === this.chartName)?.value
+  private chartDataLabel: any = data.find((item: any) => item.name === "Creditor's balance")?.label
   
   @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
 
   public barChartOptions: ChartConfiguration['options'] = {
     responsive: true,
+    aspectRatio: 2.3  ,
     // We use these empty structures as placeholders for dynamic theming.
     scales: {
       x: {
@@ -64,10 +67,16 @@ export class CreditorComponent {
     DataLabelsPlugin
   ];
   public barChartData: ChartData<'bar'> = {
-    labels: ['Opening balance', 'Accured credit', 'Paid credit', 'Adjustment', 'Closing balance'],
+    labels: this.chartDataLabel,
     datasets: [
       { data: this.chartData,
-      backgroundColor: [this.blue, this.red, this.green, this.red, this.blue]},
+      backgroundColor: [
+        this.blue, 
+        this.red, 
+        this.green, 
+        this.red, 
+        this.blue
+      ]},
     ],
     
   };

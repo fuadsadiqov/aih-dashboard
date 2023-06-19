@@ -16,7 +16,7 @@
     }
     .pie{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         .inflow-pie,
         .outflow-pie{
             max-width: 15rem;
@@ -42,5 +42,10 @@
         background-color: #eff4fc;
         padding: 0.2rem 0.5rem;
         margin-top: 1rem;
+    }
+    .legends{
+        gap: 0.1rem;
+        max-height: 7.5rem;
+        height: 100%;
     }
 }

@@ -8,20 +8,30 @@ import { data } from 'src/data';
   styleUrls: ['./remaining-debt.component.scss']
 })
 export class RemainingDebtComponent {
+  constructor(){  }
   private blue: string = 'hsl(223.97deg 64.6% 55.69%)'
   private green: string = 'hsl(138.86deg 31.82% 56.86%)'
   private red: string  = 'hsl(339.39deg 44.8% 43.33%)'
   
   public firstPieChart: any = data.find((item: any) => item.name === "Remaining debt")?.value[0]
   private firstPieChartData = this.firstPieChart.value.map((item: any) => item.data)
-  public firstPieChartLabel = this.firstPieChart.value.map((item: any) => item)
+  public firstPieChartLegend = this.firstPieChart.value.map((item: any) => item)
+  public firstPieChartLabel = this.firstPieChart.value.map((item: any) => item.legend)
   public secondPieChart: any = data.find((item: any) => item.name === "Remaining debt")?.value[1]
   private secondPieChartData = this.secondPieChart.value.map((item: any) => item.data)
-  public secondPieChartLabel = this.secondPieChart.value.map((item: any) => item)
-
+  public secondPieChartLegend = this.secondPieChart.value.map((item: any) => item)
+  public secondPieChartLabel = this.secondPieChart.value.map((item: any) => item.legend)
+  
   // Donught chart
   public doughnutChartData: ChartData<'doughnut'> = {
-    labels: [ 'cargo', 'passangers', 'other cash inflows' ],
+    labels: [ 
+        'loans from gov',
+        'gov guaranteed',
+        'loans without government gurantee',
+        'credit suisse',
+        'societe generate',
+        'HSBC bank'
+     ],
     datasets: [
       { data: this.firstPieChartData },
       { data: this.secondPieChartData },

@@ -12,7 +12,7 @@
         </div>
        <div class="legends">
         <div>
-                <ng-container *ngFor="let item of firstPieChartLabel">
+                <ng-container *ngFor="let item of firstPieChartLegend">
                         <div class="legend">
                             <div class="legend-box" ngClass={{item.backgroundColor}}></div>
                             <span>{{item.legend}}</span>
@@ -20,7 +20,7 @@
                 </ng-container>
         </div>
         <div>
-                <ng-container *ngFor="let item of secondPieChartLabel">
+                <ng-container *ngFor="let item of secondPieChartLegend">
                         <div class="legend">
                             <div class="legend-box" ngClass={{item.backgroundColor}}></div>
                             <span>{{item.legend}}</span>

@@ -8,7 +8,7 @@
     }
     .pie{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         .inflow-pie,
         .outflow-pie{
             max-width: 20rem;

@@ -2,13 +2,10 @@
     <table>
         <thead>
              <tr>
-                 <th>Cargo volume (tons)</th>
-                 <th>Import</th>
-                 <th>Export</th>
-                 <th>Transit</th>
-                 <th>Internal</th>
-                 <th>Passangers</th>
-             </tr>
+                <th *ngFor="let itemName of trades">
+                    {{itemName.name}}
+                </th>
+            </tr>
          </thead>
         <tbody>
             <tr>
@@ -28,7 +25,9 @@
     <table class="employees">
         <thead>
              <tr>
-                 <th>Employees</th>
+                <th *ngFor="let itemName of employees">
+                    {{itemName.name}}
+                </th>  
              </tr>
          </thead>
         <tbody>

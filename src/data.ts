@@ -3,42 +3,49 @@ export const data = [
         name: "Trade",
         value: [
             {
+                name: 'Cargo volume (tons)',
                 past: 2345,
                 pastPercent: -3,
                 current: 65345,
                 currentPercent: 11,
             },
             {
+                name: 'Import',
                 past: 122,
                 pastPercent: -6,
                 current: 3876,
                 currentPercent: 3,
             },
             {
+                name: 'Export',
                 past: 343,
                 pastPercent: 2,
                 current: 2111,
                 currentPercent: 7,
             },
             {
+                name: 'Transit',
                 past: 987,
                 pastPercent: -3,
                 current: 5345,
                 currentPercent: -13,
             },
             {
+                name: 'Internal',
                 past: 123,
                 pastPercent: 9,
                 current: 2001,
                 currentPercent: 5,
             },
             {
+                name: 'Passangers',
                 past: 223,
                 pastPercent: 3,
                 current: 4545,
                 currentPercent: -5,
             },
             {
+                name: 'Employees',
                 past: 13654,
                 pastPercent: 5,
                 current: 13233,
@@ -49,7 +56,9 @@ export const data = [
     {
         name: "Cash movement",
         value: [15, -10, 25, -8, 20, 12, 6],
-        label: [['Opening','balance'], ['Operating', 'inflow'], ['Financing', 'activities'], ['Operating', 'outflow'], ['FX', 'difference'], ['Investing', 'activities'], ['Cash', 'balance']]
+        label: [
+            ['Opening','balance'], ['Operating', 'inflow'], ['Financing', 'activities'], ['Operating', 'outflow'], ['FX', 'difference'], ['Investing', 'activities'], ['Cash', 'balance']
+        ]
     },
     {
         name: "Operational",
@@ -103,7 +112,8 @@ export const data = [
     },
     {
         name: "Creditor's balance",
-        value: [25, 10, -8, 5, -20]
+        value: [25, 10, -8, 5, -20],
+        label: ['Opening balance', 'Accured credit', 'Paid credit', 'Adjustment', 'Closing balance']    
     },
     {
         name: 'Remaining debt',
@@ -129,7 +139,7 @@ export const data = [
                 ]
             },
             {
-                name: "first",
+                name: "second",
                 value: [
                     {
                         legend: 'credit suisse',
@@ -145,7 +155,7 @@ export const data = [
                         legend: 'HSBC bank',
                         data: 38,
                         backgroundColor: 'lightgreen'
-                    },
+                    }
                 ]
             }
         ]
