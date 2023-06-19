@@ -14,11 +14,12 @@ export class OutflowComponent {
   
   public secondPieChart: any = data.find((item: any) => item.name === "Operational")?.value[1]
   private secondPieChartData = this.secondPieChart.value.map((item: any) => item.data)
+  private secondPieChartLegend = this.secondPieChart.value.map((item: any) => item.legend)
   public secondPieChartLabel = this.secondPieChart.value.map((item: any) => item)
 
   // Donught chart
   public doughnutChartData2: ChartData<'doughnut'> = {
-    labels: [ 'staff related costs', 'utility', 'taxes', 'fuel' ],
+    labels: this.secondPieChartLegend,
     datasets: [
       { data: this.secondPieChartData }
     ]

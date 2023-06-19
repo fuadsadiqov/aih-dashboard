@@ -14,11 +14,12 @@ export class InflowComponent {
   
   public firstPieChart: any = data.find((item: any) => item.name === "Operational")?.value[0]
   private firstPieChartData = this.firstPieChart.value.map((item: any) => item.data)
+  private firstPieChartLegend = this.firstPieChart.value.map((item: any) => item.legend)
   public firstPieChartLabel = this.firstPieChart.value.map((item: any) => item)
 
   // Donught chart
   public doughnutChartData: ChartData<'doughnut'> = {
-    labels: [ 'cargo', 'passangers', 'other cash inflows' ],
+    labels: this.firstPieChartLegend,
     datasets: [
       { data: this.firstPieChartData }
     ]
@@ -27,20 +28,11 @@ export class InflowComponent {
 
   public doughnutChartType: ChartType = 'doughnut';
   public doughnutChartOptions: any = {
-    tooltips: {
-      callbacks: {
-        title: function(tooltipItem: { [x: string]: string | number; }[], data: { [x: string]: { [x: string]: any; }; }) {
-          return data['labels'][tooltipItem[0]['index']];
-        },
-        label: function(tooltipItem: { [x: string]: string | number; }, data: { [x: string]: { [x: string]: { [x: string]: any; }; }[]; }) {
-          return data['datasets'][0]['data'][tooltipItem['index']];
-        },
-        afterLabel: function(tooltipItem: { [x: string]: string | number; }, data: { [x: string]: any[]; }) {
-          var dataset = data['datasets'][0];
-          var percent = Math.round((dataset['data'][tooltipItem['index']] / dataset["_meta"][0]['total']) * 100)
-          return '(' + percent + '%)';
-        }
-      }},
+    plugins: {
+      datalabels: {
+        anchor: 'end'
+      }
+    },
     backgroundColor: [
       this.blue,
       '#5bb5d1',

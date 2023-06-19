@@ -20,8 +20,9 @@ export class CashComponent {
   @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
 
   public barChartOptions: ChartConfiguration['options'] = {
-    responsive: true,
-    aspectRatio: 2.5,
+    // responsive: true,
+    // aspectRatio: 2.5,
+    // maintainAspectRatio: true,
     // We use these empty structures as placeholders for dynamic theming.
     scales: {
       x: {
@@ -69,8 +70,9 @@ export class CashComponent {
   public barChartData: ChartData<'bar'> = {
     labels: this.chartDataLabel,
     datasets: [
-      { data: this.chartData,
-      backgroundColor: [this.blue, this.red, this.green, this.red, this.red, this.red, this.blue]},
+      { 
+        data: this.chartData,
+        backgroundColor: [this.blue, this.red, this.green, this.red, this.red, this.red, this.blue]},
     ],
     
   };

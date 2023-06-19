@@ -57,7 +57,13 @@ export const data = [
         name: "Cash movement",
         value: [15, -10, 25, -8, 20, 12, 6],
         label: [
-            ['Opening','balance'], ['Operating', 'inflow'], ['Financing', 'activities'], ['Operating', 'outflow'], ['FX', 'difference'], ['Investing', 'activities'], ['Cash', 'balance']
+            ['Opening','balance'], 
+            ['Operating', 'inflow'], 
+            ['Financing', 'activities'], 
+            ['Operating', 'outflow'], 
+            ['FX', 'difference'], 
+            ['Investing', 'activities'], 
+            ['Cash', 'balance']
         ]
     },
     {
