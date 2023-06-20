@@ -7,7 +7,20 @@
             flex: 1;
         }
         .flex-0{
-            flex: 0;
+            width: 40rem;
+        }
+        @media (max-width: 1400px){
+            .operational{
+                width: 30rem;
+            }
+            .flex-0{
+                width: 30rem;
+            }
+        }
+        @media (max-width: 1200px){
+            .flex-0{
+                width: 25rem;
+            }
         }
     }
     .legend{

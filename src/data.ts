@@ -119,7 +119,7 @@ export const data = [
     {
         name: "Creditor's balance",
         value: [25, 10, -8, 5, -20],
-        label: ['Opening balance', 'Accured credit', 'Paid credit', 'Adjustment', 'Closing balance']    
+        label: [['Opening', 'balance'], ['Accured', 'credit'], ['Paid', 'credit'], 'Adjustment', ['Closing', 'balance']]    
     },
     {
         name: 'Remaining debt',

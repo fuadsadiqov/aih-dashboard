@@ -40,15 +40,17 @@
     .employees{
         flex: 1;
         width: max-content; 
-        &::after{
-            position: absolute;
-            background-color: #eff4fc;
-            font-size: 1rem;
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            border-radius: 0 0 2rem 0;
-            transform: translateY(0);
-            content: "actual | per staff schedule";
+    }
+}
+@media (max-width: 1150px){
+    .trade{
+        table{
+            thead{
+                font-size: 1.1rem;
+            }
+            tbody{
+                font-size: 1.1rem;
+            }
         }
     }
 }

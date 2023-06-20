@@ -1,20 +1,21 @@
 .remaining-pie{
     margin-top: 1rem;
     background-color: #FFF;
+    padding-bottom: 3.5rem;
+    box-shadow: 0.3rem 1rem 2.1rem -1.8rem rgba(0,0,0,0.75);
     .wrapper{
         display: flex;
-        width: 44rem;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        box-shadow: 0.3rem 1rem 2.1rem -1.8rem rgba(0,0,0,0.75);
         gap: 1rem;
+        
         .charts{
             width: 35%;
             position: relative;
             span{
                 font-weight: 600;
-                font-size: 1.5rem;
+                font-size: 60%;
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -32,7 +33,7 @@
         font-weight: 500;
         text-align: left;
         span{
-            color: #CCC ;
+            color: #CCC;
         }
     }
 }

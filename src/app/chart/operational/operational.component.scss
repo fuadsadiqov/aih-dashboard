@@ -1,19 +1,19 @@
 .operational{
-    padding: 0 1rem;
+    padding: 0 1rem 0.5rem 1rem;
+    margin-bottom: 1rem;
     width: 100%;
     background-color: #FFF;
     box-shadow: 0.3rem 1rem 2.1rem -1.8rem rgba(0,0,0,0.75);
     .chart-box{
-        width: 70%;
+        width: 100%;
     }
     .pie{
         display: flex;
         justify-content: space-evenly;
         .inflow-pie,
         .outflow-pie{
-            max-width: 20rem;
-            width: 35%;
-            margin-right: 3rem;
+            max-width: 25rem;
+            width: 50%;
         }
     }
     .charts{

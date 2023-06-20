@@ -34,3 +34,15 @@
         font-weight: 500;
     }
 }
+@media (max-width: 1150px){
+    .table-wrapper{
+        font-size: 1rem;
+        .table-item{
+            table{
+                .table-title{
+                    font-size: 1rem !important;
+                }
+            }
+        }
+    }
+}

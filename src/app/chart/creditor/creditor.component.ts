@@ -21,7 +21,7 @@ export class CreditorComponent {
 
   public barChartOptions: ChartConfiguration['options'] = {
     responsive: true,
-    aspectRatio: 2.3  ,
+    // aspectRatio: 2.3  ,
     // We use these empty structures as placeholders for dynamic theming.
     scales: {
       x: {
