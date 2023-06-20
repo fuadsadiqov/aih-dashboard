@@ -18,17 +18,17 @@ export class InflowComponent implements OnInit{
   private green: string = 'hsl(138.86deg 31.82% 56.86%)'
   private red: string  = 'hsl(339.39deg 44.8% 43.33%)'
   
-  public firstPieChart: any = data.find((item: any) => item.name === "Operational")?.value[0]
-  private firstPieChartData = this.firstPieChart.value.map((item: any) => item.data)
-  private firstPieChartLegend = this.firstPieChart.value.map((item: any) => item.legend)
-  public firstPieChartLabel = this.firstPieChart.value.map((item: any) => item)
+  public pieChart: any = data.find((item: any) => item.name === "Operational")?.value[0]
+  private pieChartData = this.pieChart.value.map((item: any) => item.data)
+  private pieChartLegend = this.pieChart.value.map((item: any) => item.legend)
+  public pieChartLabel = this.pieChart.value.map((item: any) => item)
 
   // Donught chart
   public doughnutChartData: ChartData<'doughnut'> = {
-    labels: this.firstPieChartLegend,
+    labels: this.pieChartLegend,
     datasets: [
       { 
-        data: this.firstPieChartData, 
+        data: this.pieChartData, 
         backgroundColor: [
           this.blue,
           this.red,

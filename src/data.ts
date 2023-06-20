@@ -238,7 +238,7 @@ export const data = [
                 ]
             },
             {
-                name: 'Passanger',
+                name: 'Passenger',
                 data: [
                     {
                         label: 'Abseron circular',

@@ -13,17 +13,17 @@ export class OutflowComponent {
   private green: string = 'hsl(138.86deg 31.82% 56.86%)'
   private red: string  = 'hsl(339.39deg 44.8% 43.33%)'
   
-  public secondPieChart: any = data.find((item: any) => item.name === "Operational")?.value[1]
-  private secondPieChartData = this.secondPieChart.value.map((item: any) => item.data)
-  private secondPieChartLegend = this.secondPieChart.value.map((item: any) => item.legend)
-  public secondPieChartLabel = this.secondPieChart.value.map((item: any) => item)
+  public pieChart: any = data.find((item: any) => item.name === "Operational")?.value[1]
+  private pieChartData = this.pieChart.value.map((item: any) => item.data)
+  private pieChartLegend = this.pieChart.value.map((item: any) => item.legend)
+  public pieChartLabel = this.pieChart.value.map((item: any) => item)
 
   // Donught chart
   public doughnutChartData2: ChartData<'doughnut'> = {
-    labels: this.secondPieChartLegend,
+    labels: this.pieChartLegend,
     datasets: [
       { 
-        data: this.secondPieChartData, 
+        data: this.pieChartData, 
         backgroundColor: [
           this.blue,
           this.red,

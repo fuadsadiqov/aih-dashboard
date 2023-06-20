@@ -23,6 +23,7 @@ export class RemainingDebtComponent {
   public secondPieChartLegend = this.secondPieChart.value.map((item: any) => item)
   public secondPieChartLabel = this.secondPieChart.value.map((item: any) => item.legend)
   
+  colorArray = [ this.blue, this.red, this.green, '#5bb5d1', '#839be5']
   // Donught chart
   public doughnutChartData: ChartData<'doughnut'> = {
     labels: [ 
@@ -36,23 +37,11 @@ export class RemainingDebtComponent {
     datasets: [
       { 
         data: this.firstPieChartData, 
-        backgroundColor: [
-        this.blue,
-        this.red,
-        this.green,
-        '#5bb5d1',
-        '#839be5'
-        ]
+        backgroundColor: this.colorArray
       },
       { 
         data: this.secondPieChartData,
-        backgroundColor: [
-          this.blue,
-          this.red,
-          this.green,
-          '#5bb5d1',
-          '#839be5'
-        ]
+        backgroundColor: this.colorArray
       },
     ]
   };

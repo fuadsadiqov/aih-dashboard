@@ -15,23 +15,20 @@ export class RevenueBreakdownComponent {
   private red: string  = 'hsl(339.39deg 44.8% 43.33%)'
   
   public firstPieChart: any = data.find((item: any) => item.name === "Revenue breakdown")?.value[0]
-  public secondPieChart: any = data.find((item: any) => item.name === "Revenue breakdown")?.value[1]
-  public thirdPieChart: any = data.find((item: any) => item.name === "Revenue breakdown")?.value[2]
-  
   public firstPieChartData: any = this.firstPieChart.data.map((item: any) => item.data)
-  public secondPieChartData: any = this.secondPieChart.data.map((item: any) => item.data)
-  public thirdPieChartData: any = this.thirdPieChart.data.map((item: any) => item.data)
-
   public firstPieChartLabel: any = this.firstPieChart.data.map((item: any) => item.label)
-  public secondPieChartLabel: any = this.secondPieChart.data.map((item: any) => item.label)
-  public thirdPieChartLabel: any = this.thirdPieChart.data.map((item: any) => item.label)
   
-  constructor(){
-    
-  }
+  public secondPieChart: any = data.find((item: any) => item.name === "Revenue breakdown")?.value[1]
+  public secondPieChartData: any = this.secondPieChart.data.map((item: any) => item.data)
+  public secondPieChartLabel: any = this.secondPieChart.data.map((item: any) => item.label)
+
+  public thirdPieChart: any = data.find((item: any) => item.name === "Revenue breakdown")?.value[2]
+  public thirdPieChartData: any = this.thirdPieChart.data.map((item: any) => item.data)
+  public thirdPieChartLabel: any = this.thirdPieChart.data.map((item: any) => item.label)  
+  
+  colorArray = [this.blue, this.red, this.green, '#5bb5d1', '#839be5']
   // Bar chart
   @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
-
   public barChartOptions: ChartConfiguration['options'] = {
     responsive: true,
     // We use these empty structures as placeholders for dynamic theming.
@@ -81,13 +78,7 @@ export class RevenueBreakdownComponent {
     datasets: [
       { 
         data: this.firstPieChartData,
-        backgroundColor: [
-          this.blue,
-          this.red,
-          this.green,
-          '#5bb5d1',
-          '#839be5'
-        ]
+        backgroundColor: this.colorArray
       }
     ]
   };
@@ -96,13 +87,7 @@ export class RevenueBreakdownComponent {
     datasets: [
       { 
         data: this.secondPieChartData,
-        backgroundColor: [
-          this.blue,
-          this.red,
-          this.green,
-          '#5bb5d1',
-          '#839be5'
-        ]
+        backgroundColor: this.colorArray
       }
     ]
   };
@@ -111,17 +96,10 @@ export class RevenueBreakdownComponent {
     datasets: [
       { 
         data: this.thirdPieChartData,
-        backgroundColor: [
-          this.blue,
-          this.red,
-          this.green,
-          '#5bb5d1',
-          '#839be5'
-        ]
+        backgroundColor: this.colorArray
       }
     ]
   };
-  public barChartLegend: boolean = false;
   public doughnutChartPlugins = [
     DataLabelsPlugin
   ];
