@@ -26,7 +26,12 @@
             font-size: 14px;
             font-weight: 500;
             height: 45px;
-            padding: 0 20px;
+            padding: 0 2rem;
+            tr{
+                td{
+                    padding: 0 1rem;
+                }
+            }
         }
         .trade-up{
             transform: translateY(0.6rem);

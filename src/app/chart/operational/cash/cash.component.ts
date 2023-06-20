@@ -1,4 +1,4 @@
-import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { ChartConfiguration, ChartData, ChartType } from 'chart.js';
 import { BaseChartDirective } from 'ng2-charts';
 import { data } from 'src/data';
@@ -20,10 +20,6 @@ export class CashComponent {
   @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
 
   public barChartOptions: ChartConfiguration['options'] = {
-    // responsive: true,
-    // aspectRatio: 2.5,
-    // maintainAspectRatio: true,
-    // We use these empty structures as placeholders for dynamic theming.
     scales: {
       x: {
         display: true, 

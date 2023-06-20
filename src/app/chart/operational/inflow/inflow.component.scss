@@ -1,8 +1,16 @@
 .inflow-pie{
     max-width: 20rem;
-    width: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .charts{
+        width: 70%;  
+    }
     h3{
             padding: 0.5rem 1rem;
+            margin-bottom: 0;
             display: inline-block;
             text-align: left;
             font-weight: 500;
@@ -12,10 +20,10 @@
             }
         }
     }
-.legends{
-    .legend{
-        span{
-            white-space: nowrap;
+    .legends{
+        .legend{
+            span{
+                white-space: nowrap;
         }
     }
 }

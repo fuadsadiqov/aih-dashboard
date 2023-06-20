@@ -74,17 +74,17 @@ export const data = [
                 value: [
                     {
                         legend: 'cargo',
-                        data: 87,
+                        data: 80,
                         backgroundColor: 'blue'
                     },
                     {
                         legend: 'passangers',
-                        data: 5,
+                        data: 15,
                         backgroundColor: 'gray'
                     },
                     {
                         legend: 'other cash inflows',
-                        data: 6,
+                        data: 5,
                         backgroundColor: 'lightgreen'
                     }
                 ]
@@ -217,22 +217,22 @@ export const data = [
                 data: [
                     {
                         label: 'transit',
-                        data: 138874,
+                        data: 25,
                         color: 'blue'
                     },
                     {
                         label: 'import',
-                        data: 83970,
+                        data: 42,
                         color: 'gray'
                     },
                     {
                         label: 'export',
-                        data: 71052,
+                        data: 25,
                         color: 'lightgreen'
                     },
                     {
                         label: 'internal',
-                        data: 29066,
+                        data: 8,
                         color: 'green'
                     },
                 ]
@@ -242,12 +242,12 @@ export const data = [
                 data: [
                     {
                         label: 'Abseron circular',
-                        data: 2657,
+                        data: 80,
                         color: 'blue'
                     },
                     {
                         label: 'regional',
-                        data: 885   ,
+                        data: 20,
                         color: 'gray'
                     }
                 ]
@@ -257,27 +257,27 @@ export const data = [
                 data: [
                     {
                         label: 'transit',
-                        data: 7663,
+                        data: 21,
                         color: 'blue'
                     },
                     {
                         label: 'import',
-                        data: 7663,
+                        data: 15,
                         color: 'lightgreen'
                     },
                     {
                         label: 'export',
-                        data: 3831,
+                        data: 7,
                         color: 'green'
                     },
                     {
                         label: 'internal',
-                        data: 3113,
+                        data: 30,
                         color: 'gray'
                     },
                     {
                         label: 'internal',
-                        data: 1676,
+                        data: 28,
                         color: 'blue'
                     },
                 ]
