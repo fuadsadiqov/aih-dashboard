@@ -17,19 +17,35 @@
             img{
                 width: 7.5rem;
             }
+            @media (max-width: 1200px) {
+                span{
+                    font-size: 1.3rem;
+                }
+            }
         }
         .top-right{
             display: flex;
-            gap: 2.5rem;
+            gap: 1.5rem;
             align-items: center;
             span{
                 font-size: 2rem;
+            }
+            @media (max-width: 1200px) {
+                span{
+                    font-size: 1.3rem;
+                }
             }
             .account{
                 width: 3.5rem;
                 height: 3.5rem;
                 border-radius: 50%;
                 background-color: #456CD9;
+            }
+            @media (max-width: 1200px) {
+                .account{
+                    width: 2.6rem;
+                    height: 2.6rem;
+                }
             }
         }
     }
@@ -47,6 +63,9 @@
                 cursor: pointer;
                 &:hover{
                     color: #456CD9;
+                }
+                @media (max-width: 1200px) {
+                    font-size: 1.3rem;
                 }
             }
             .active{

@@ -55,7 +55,7 @@ export const data = [
     },
     {
         name: "Cash movement",
-        value: [15, -10, 25, -8, 20, 12, 6],
+        value: [[15, 40], [40, 60], [25, 50], [8, 33], [60, 70], [60, 85], [0, 55]],
         label: [
             ['Opening','balance'], 
             ['Operating', 'inflow'], 
@@ -118,7 +118,7 @@ export const data = [
     },
     {
         name: "Creditor's balance",
-        value: [25, 10, -8, 5, -20],
+        value: [[0, 80], [40, 65], [10, 25], [75, 84], [0, 90]],
         label: [['Opening', 'balance'], ['Accured', 'credit'], ['Paid', 'credit'], 'Adjustment', ['Closing', 'balance']]    
     },
     {
@@ -161,7 +161,12 @@ export const data = [
                         legend: 'HSBC bank',
                         data: 38,
                         backgroundColor: 'lightgreen'
-                    }
+                    },
+                    {
+                        legend: '',
+                        data: 40,
+                        backgroundColor: 'white'
+                    },
                 ]
             }
         ]

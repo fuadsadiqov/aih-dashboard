@@ -36,17 +36,22 @@ export class InflowComponent implements OnInit{
           '#5bb5d1',
           '#839be5'
       ] }
-    ]
+    ],
   };
   public doughnutChartPlugins = [
     DataLabelsPlugin
   ];
   public doughnutChartType: ChartType = 'doughnut';
   public doughnutChartOptions: ChartConfiguration['options'] = {
+    elements: {
+      arc: {
+        borderWidth: 0
+      }
+    },
     plugins: {
       legend: {
-        display: false
-      },
+        display: false,
+      },      
       datalabels: {        
         color: 'black',
         formatter: (value: number) => {

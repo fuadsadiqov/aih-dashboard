@@ -32,6 +32,11 @@
             display: flex;
             justify-content: center;
             gap: 0.5rem;
+            .legend{
+                span{
+                    white-space: normal;
+                }
+            }
         }
     }
     h3{

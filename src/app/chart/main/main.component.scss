@@ -78,8 +78,32 @@
                     border-radius: 0.5rem;
                     font-size: 1.5rem;
                 }
-                .option{
-                    width: 2rem;
+            }
+        }
+    }
+}
+@media (max-width: 1200px) {
+    .main{
+        .legend{
+            .left{
+                ul{
+                    li{
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+            .right{
+                .button-wrapper{
+                    button{
+                        font-size: 1.1rem;
+                        width: 7rem;
+                        height: 2rem;
+                    }
+                }
+                .date-option{
+                    select{
+                        font-size: 1rem;
+                    }
                 }
             }
         }

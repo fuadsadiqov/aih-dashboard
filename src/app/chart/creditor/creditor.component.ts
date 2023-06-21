@@ -10,12 +10,10 @@ import DataLabelsPlugin from 'chartjs-plugin-datalabels';
   styleUrls: ['./creditor.component.scss']
 })
 export class CreditorComponent {
-  private blue: string = 'hsl(223.97deg 64.6% 55.69%)'
-  private green: string = 'hsl(138.86deg 31.82% 56.86%)'
-  private red: string  = 'hsl(339.39deg 44.8% 43.33%)'
   public chartName: string = "Creditor's balance"
   private chartData: any = data.find((item: any) => item.name === this.chartName)?.value
   private chartDataLabel: any = data.find((item: any) => item.name === "Creditor's balance")?.label
+  private colorArray = [ '#456CD7', '#A03D5F', '#6EB484']
   
   @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
 
@@ -43,8 +41,8 @@ export class CreditorComponent {
       y: { 
         display: false, 
         stacked: true,
-        min: -20,
-        max: 50,
+        min: 0,
+        max: 120,
       }
     },
     plugins: {
@@ -70,13 +68,7 @@ export class CreditorComponent {
     labels: this.chartDataLabel,
     datasets: [
       { data: this.chartData,
-      backgroundColor: [
-        this.blue, 
-        this.red, 
-        this.green, 
-        this.red, 
-        this.blue
-      ]},
+      backgroundColor: this.colorArray},
     ],
     
   };

@@ -10,10 +10,6 @@ import DataLabelsPlugin from 'chartjs-plugin-datalabels';
 })
 export class RemainingDebtComponent {
   constructor(){  }
-  private blue: string = 'hsl(223.97deg 64.6% 55.69%)'
-  private green: string = 'hsl(138.86deg 31.82% 56.86%)'
-  private red: string  = 'hsl(339.39deg 44.8% 43.33%)'
-  
   public firstPieChart: any = data.find((item: any) => item.name === "Remaining debt")?.value[0]
   private firstPieChartData = this.firstPieChart.value.map((item: any) => item.data)
   public firstPieChartLegend = this.firstPieChart.value.map((item: any) => item)
@@ -23,7 +19,7 @@ export class RemainingDebtComponent {
   public secondPieChartLegend = this.secondPieChart.value.map((item: any) => item)
   public secondPieChartLabel = this.secondPieChart.value.map((item: any) => item.legend)
   
-  colorArray = [ this.blue, this.red, this.green, '#5bb5d1', '#839be5']
+  colorArray = [ '#456CD7', '#A03D5F', '#6EB484', '#5bb5d1', '#839be5']
   // Donught chart
   public doughnutChartData: ChartData<'doughnut'> = {
     labels: [ 
@@ -37,7 +33,8 @@ export class RemainingDebtComponent {
     datasets: [
       { 
         data: this.firstPieChartData, 
-        backgroundColor: this.colorArray
+        backgroundColor: this.colorArray,
+        borderWidth: 0
       },
       { 
         data: this.secondPieChartData,
@@ -50,6 +47,12 @@ export class RemainingDebtComponent {
   ];
   public doughnutChartType: ChartType = 'doughnut';
   public doughnutChartOptions: ChartConfiguration['options'] = {
+    elements: {
+      arc: {
+        borderWidth: 4,
+        
+      },
+    },
     plugins: {
       legend: {
         display: false

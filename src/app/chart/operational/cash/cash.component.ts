@@ -40,8 +40,8 @@ export class CashComponent {
       y: { 
         display: false, 
         stacked: true,
-        min: -20,
-        max: 50,
+        min: 0,
+        max: 100,
       }
     },
     plugins: {

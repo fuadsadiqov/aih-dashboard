@@ -40,6 +40,11 @@ export class OutflowComponent {
   ];
   public doughnutChartType: ChartType = 'doughnut';
   public doughnutChartOptions: ChartConfiguration['options'] = {
+    elements: {
+      arc: {
+        borderWidth: 0
+      }
+    },
     plugins: {
       legend: {
         display: false

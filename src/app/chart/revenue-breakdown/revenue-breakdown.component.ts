@@ -10,9 +10,6 @@ import DataLabelsPlugin from 'chartjs-plugin-datalabels';
   styleUrls: ['./revenue-breakdown.component.scss']
 })
 export class RevenueBreakdownComponent {
-  private blue: string = 'hsl(223.97deg 64.6% 55.69%)'
-  private green: string = 'hsl(138.86deg 31.82% 56.86%)'
-  private red: string  = 'hsl(339.39deg 44.8% 43.33%)'
   
   public firstPieChart: any = data.find((item: any) => item.name === "Revenue breakdown")?.value[0]
   public firstPieChartData: any = this.firstPieChart.data.map((item: any) => item.data)
@@ -26,7 +23,8 @@ export class RevenueBreakdownComponent {
   public thirdPieChartData: any = this.thirdPieChart.data.map((item: any) => item.data)
   public thirdPieChartLabel: any = this.thirdPieChart.data.map((item: any) => item.label)  
   
-  colorArray = [this.blue, this.red, this.green, '#5bb5d1', '#839be5']
+  colorArray = [ '#456CD7', '#A03D5F', '#6EB484', '#5bb5d1', '#839be5']
+  
   // Bar chart
   @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
   public barChartOptions: ChartConfiguration['options'] = {
@@ -105,6 +103,11 @@ export class RevenueBreakdownComponent {
   ];
   public doughnutChartType: ChartType = 'doughnut';
   public doughnutChartOptions: ChartConfiguration['options'] = {
+    elements: {
+      arc: {
+        borderWidth: 0
+      }
+    },
     plugins: {
       legend: {
         display: false
