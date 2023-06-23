@@ -29,8 +29,8 @@ ul{
 }
 .legends{
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
     padding-top: 2rem;
-    grid-template-columns: repeat(2, 1fr);
     font-size: 0.9rem;
     gap: 0.5rem;
     .legend{
@@ -51,26 +51,25 @@ ul{
                 width: 0.6rem;
                 height: 0.6rem;
                 border-radius: 50%;
-                background-color: #FFF;
             }
         }
         .blue{
-            background-color: hsl(223.97deg 64.6% 55.69%);
+            border: 5px solid hsl(223.97deg 64.6% 55.69%);
         }
         .gray{
-            background-color: #5bb5d1;
+            border: 5px solid #5bb5d1;
         }
         .lightgreen{
-            background-color: #839be5;
+            border: 5px solid #839be5;
         }
         .green{
-            background-color: hsl(138.86deg 31.82% 56.86%);
+            border: 5px solid hsl(138.86deg 31.82% 56.86%);
         }
         .red{
-            background-color: hsl(339.39deg 44.8% 43.33%);
+            border: 5px solid hsl(339.39deg 44.8% 43.33%);
         }
         .white{
-            background-color: #FFF;
+            border: 5px solid #FFF;
         }
     }
 }
