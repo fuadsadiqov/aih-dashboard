@@ -129,12 +129,12 @@ export const data = [
                 value: [
                     {
                         legend: 'loans from gov',
-                        data: 56,
+                        data:36,
                         backgroundColor: 'red'
                     },
                     {
                         legend: 'gov guaranteed',
-                        data: 41,
+                        data: 51,
                         backgroundColor: 'blue'
                     },
                     {
