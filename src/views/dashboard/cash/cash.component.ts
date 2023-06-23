@@ -17,95 +17,93 @@ export class CashComponent {
     value: null,
     children: []
   }
-  itemChildrenTitle: string[] | undefined = []
-  itemChildrenValues: Array<number[]> | undefined
+  itemChildrenTitle: string[] | any = []
+  itemChildrenValues: number[] | any = []
 
   constructor(private restService: RestService){
     this.restService.getData()
     .subscribe((res: ResponseType[] | any) => {        
       this.item = res.find((item: ResponseType) => item.title === "Cash movement");
+      this.name = this.item.title
       this.itemChildrenTitle = this.item.children?.map((item: ResponseType) => item.title)
       this.itemChildrenValues = this.item.children?.map((item: ResponseType) => item.value)
-      console.log(this.item);
       console.log(this.itemChildrenTitle);
-            
+      console.log(this.itemChildrenValues);
     })    
-}
-  // // private colorArray = [ '#456CD7', '#A03D5F', '#6EB484']
-  // // private chartData: any = data.find((item: any) => item.name === "Cash movement")?.value
-  // // private chartDataLabel: any = data.find((item: any) => item.name === "Cash movement")?.label
-  // // public delayed: boolean = false
-  // // @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
+  }
+  private colorArray = [ '#456CD7', '#A03D5F', '#6EB484']
+  public delayed: boolean = false
+  @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
 
-  // // public barChartOptions: ChartConfiguration['options'] = {
-  // //   aspectRatio: 2.3,
-  // //   animation: {
-  // //     onComplete: () => {
-  // //       this.delayed = true;
-  // //     },
-  // //     delay: (context) => {
-  // //       let delay = 0;
-  // //       if (context.type === 'data' && context.mode === 'default' && !this.delayed) {
-  // //         delay = context.dataIndex * 300 + context.datasetIndex * 100;
-  // //       }
-  // //       return delay;
-  // //     },
-  // //   },
-  // //   scales: {
-  // //     x: {
-  // //       display: true, 
-  // //       stacked: true,
-  // //       ticks: {
-  // //         display: true,
-  // //         font: function(context) {
-  // //           var width = context.chart.width;
-  // //           var size = Math.round(width / 45);
+  public barChartOptions: ChartConfiguration['options'] = {
+    aspectRatio: 2.3,
+    animation: {
+      onComplete: () => {
+        this.delayed = true;
+      },
+      delay: (context) => {
+        let delay = 0;
+        if (context.type === 'data' && context.mode === 'default' && !this.delayed) {
+          delay = context.dataIndex * 300 + context.datasetIndex * 100;
+        }
+        return delay;
+      },
+    },
+    scales: {
+      x: {
+        display: true, 
+        stacked: true,
+        ticks: {
+          display: true,
+          font: function(context) {
+            var width = context.chart.width;
+            var size = Math.round(width / 45);
 
-  // //           return {
-  // //               size: size
-  // //           };
-  // //       },
-  // //         color: '#BBB'
-  // //       },
+            return {
+                size: size
+            };
+        },
+          color: '#BBB'
+        },
     
-  // //       grid: {
-  // //         display: false, // Hide y-axis grid lines
-  // //       }, 
-  // //       // stacked: true,
-  // //      },
-  // //     y: { 
-  // //       display: false, 
-  // //       stacked: true,
-  // //       min: 0,
-  // //       max: 100,
-  // //     }
-  // //   },
-  // //   plugins: {
-  // //     legend: {
-  // //       display: false,
-  // //     },
-  // //     datalabels: {
-  // //       anchor: 'end',
-  // //       align: 'end'
-  // //     },
-  // //   },
-  // //   elements: {
-  // //     bar: {
-  // //       borderWidth: 0
-  // //     }
-  // //   },
-  // // };
-  // // public barChartType: ChartType = 'bar';
-  // // public barChartPlugins = [
-  // //   DataLabelsPlugin
-  // // ];
-  // // public barChartData: ChartData<'bar'> = {
-  // //   labels: this.chartDataLabel,
-  // //   datasets: [
-  // //     { 
-  // //       data: this.chartData,
-  // //       backgroundColor: this.colorArray},
-  // //   ],
+        grid: {
+          display: false, // Hide y-axis grid lines
+        }, 
+        // stacked: true,
+       },
+      y: { 
+        display: false, 
+        stacked: true,
+        min: 0,
+        max: 100,
+      }
+    },
+    plugins: {
+      legend: {
+        display: false,
+      },
+      datalabels: {
+        anchor: 'end',
+        align: 'end'
+      },
+    },
+    elements: {
+      bar: {
+        borderWidth: 0
+      }
+    },
+  };
+  public barChartType: ChartType = 'bar';
+  public barChartPlugins = [
+    DataLabelsPlugin
+  ];
+  public barChartData: ChartData<'bar'> = {
+    labels: this.itemChildrenTitle,
+    datasets: [
+      { 
+        data: this.itemChildrenValues,
+        backgroundColor: this.colorArray},
+    ],
     
-  // };
+  };
 }
