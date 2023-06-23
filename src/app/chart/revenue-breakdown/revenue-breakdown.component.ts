@@ -24,7 +24,6 @@ export class RevenueBreakdownComponent {
   public thirdPieChartLabel: any = this.thirdPieChart.data.map((item: any) => item.label)  
   
   colorArray = [ '#456CD7', '#A03D5F', '#6EB484', '#5bb5d1', '#839be5']
-  
   // Bar chart
   @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
   public barChartOptions: ChartConfiguration['options'] = {
@@ -74,7 +73,7 @@ export class RevenueBreakdownComponent {
   public doughnutChartData: ChartData<'doughnut'> = {
     labels: this.firstPieChartLabel,
     datasets: [
-      { 
+      {
         data: this.firstPieChartData,
         backgroundColor: this.colorArray
       }

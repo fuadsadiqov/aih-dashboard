@@ -14,13 +14,23 @@ export class CreditorComponent {
   private chartData: any = data.find((item: any) => item.name === this.chartName)?.value
   private chartDataLabel: any = data.find((item: any) => item.name === "Creditor's balance")?.label
   private colorArray = [ '#456CD7', '#A03D5F', '#6EB484']
-  
+  private delayed: boolean = false
   @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
 
   public barChartOptions: ChartConfiguration['options'] = {
+    animation: {
+      onComplete: () => {
+        this.delayed = true;
+      },
+      delay: (context) => {
+        let delay = 0;
+        if (context.type === 'data' && context.mode === 'default' && !this.delayed) {
+          delay = context.dataIndex * 300 + context.datasetIndex * 100;
+        }
+        return delay;
+      },
+    },
     responsive: true,
-    // aspectRatio: 2.3  ,
-    // We use these empty structures as placeholders for dynamic theming.
     scales: {
       x: {
         display: true, 

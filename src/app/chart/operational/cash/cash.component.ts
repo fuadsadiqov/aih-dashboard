@@ -10,16 +10,26 @@ import DataLabelsPlugin from 'chartjs-plugin-datalabels';
   styleUrls: ['./cash.component.scss']
 })
 export class CashComponent {
-  private blue: string = 'hsl(223.97deg 64.6% 55.69%)'
-  private green: string = 'hsl(138.86deg 31.82% 56.86%)'
-  private red: string  = 'hsl(339.39deg 44.8% 43.33%)'
-  
+  private colorArray = [ '#456CD7', '#A03D5F', '#6EB484']
   private chartData: any = data.find((item: any) => item.name === "Cash movement")?.value
   private chartDataLabel: any = data.find((item: any) => item.name === "Cash movement")?.label
-
+  public delayed: boolean = false
   @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
 
   public barChartOptions: ChartConfiguration['options'] = {
+    aspectRatio: 2.3,
+    animation: {
+      onComplete: () => {
+        this.delayed = true;
+      },
+      delay: (context) => {
+        let delay = 0;
+        if (context.type === 'data' && context.mode === 'default' && !this.delayed) {
+          delay = context.dataIndex * 300 + context.datasetIndex * 100;
+        }
+        return delay;
+      },
+    },
     scales: {
       x: {
         display: true, 
@@ -68,7 +78,7 @@ export class CashComponent {
     datasets: [
       { 
         data: this.chartData,
-        backgroundColor: [this.blue, this.red, this.green, this.red, this.red, this.red, this.blue]},
+        backgroundColor: this.colorArray},
     ],
     
   };

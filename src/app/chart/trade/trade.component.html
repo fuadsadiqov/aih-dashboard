@@ -10,11 +10,11 @@
         <tbody>
             <tr>
                 <td *ngFor="let item of trades">
-                    <span>{{item.past }} k</span>
+                    <span>{{item.past | number }} k</span>
                     <mat-icon class="trade-up" *ngIf="item.pastPercent > 0">arrow_drop_up</mat-icon>
                     <mat-icon class="trade-down" *ngIf="item.pastPercent < 0">arrow_drop_down</mat-icon>
                     <span>%{{item.pastPercent | number }}</span> | 
-                    <span>{{item.current }} k</span>
+                    <span>{{item.current | number }} k</span>
                     <mat-icon class="trade-up" *ngIf="item.currentPercent > 0">arrow_drop_up</mat-icon>
                     <mat-icon class="trade-down" *ngIf="item.currentPercent < 0">arrow_drop_down</mat-icon>
                     <span>%{{item.currentPercent | number }}</span>
@@ -33,11 +33,11 @@
         <tbody>
             <tr>
                 <td *ngFor="let item of employees">
-                    <span>{{item.past }} k</span>
+                    <span>{{item.past | number }} k</span>
                     <mat-icon class="trade-up" *ngIf="item.pastPercent > 0">arrow_drop_up</mat-icon>
                     <mat-icon class="trade-down" *ngIf="item.pastPercent < 0">arrow_drop_down</mat-icon>
                     <span>%{{item.pastPercent | number }}</span> | 
-                    <span>{{item.current }} k</span>
+                    <span>{{item.current | number }} k</span>
                     <mat-icon class="trade-up" *ngIf="item.currentPercent > 0">arrow_drop_up</mat-icon>
                     <mat-icon class="trade-down" *ngIf="item.currentPercent < 0">arrow_drop_down</mat-icon>
                     <span>%{{item.currentPercent | number }}</span>

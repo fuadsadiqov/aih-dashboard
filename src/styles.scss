@@ -1,8 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500&display=swap');
 
+@font-face {
+    font-family: 'Segoe UI';
+    src: local('Segoe UI'), local('SegoeUI'),
+      url('./assets/Segoe\ UI.ttf') format('ttf'),
+      url('./assets/Segoe\ UI\ Bold.ttf') format('ttf'),
+      url('./assets/Segoe\ UI\ Bold\ Italic.ttf') format('ttf'),
+      url('./assets/Segoe\ UI\ Italic.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
 *{
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,7 +22,7 @@ html{
     font-size: 67.5%;
 }
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; }
 
 ul{
     list-style: none;
@@ -68,7 +78,7 @@ ul{
     position: relative;
         span{
             font-weight: 500;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -81,5 +91,4 @@ ul{
                 font-size: 1rem;
             }
         }
-
 }

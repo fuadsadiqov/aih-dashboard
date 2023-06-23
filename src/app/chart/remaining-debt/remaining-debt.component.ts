@@ -9,7 +9,6 @@ import DataLabelsPlugin from 'chartjs-plugin-datalabels';
   styleUrls: ['./remaining-debt.component.scss']
 })
 export class RemainingDebtComponent {
-  constructor(){  }
   public firstPieChart: any = data.find((item: any) => item.name === "Remaining debt")?.value[0]
   private firstPieChartData = this.firstPieChart.value.map((item: any) => item.data)
   public firstPieChartLegend = this.firstPieChart.value.map((item: any) => item)
@@ -19,7 +18,7 @@ export class RemainingDebtComponent {
   public secondPieChartLegend = this.secondPieChart.value.map((item: any) => item)
   public secondPieChartLabel = this.secondPieChart.value.map((item: any) => item.legend)
   
-  colorArray = [ '#456CD7', '#A03D5F', '#6EB484', '#5bb5d1', '#839be5']
+  private colorArray = [ '#456CD7', '#A03D5F', '#6EB484', '#5bb5d1', '#839be5']
   // Donught chart
   public doughnutChartData: ChartData<'doughnut'> = {
     labels: [ 
@@ -34,11 +33,22 @@ export class RemainingDebtComponent {
       { 
         data: this.firstPieChartData, 
         backgroundColor: this.colorArray,
-        borderWidth: 0
+        borderWidth: 0,
+        weight: 2,
+        datalabels: {
+          anchor: 'end',
+          align: 'end',
+        }
       },
       { 
         data: this.secondPieChartData,
-        backgroundColor: this.colorArray
+        backgroundColor: this.colorArray,
+        circumference: 130,
+        weight: 1,
+        datalabels: {
+          anchor: 'start',
+          align: 'end'
+        }
       },
     ]
   };
@@ -49,8 +59,7 @@ export class RemainingDebtComponent {
   public doughnutChartOptions: ChartConfiguration['options'] = {
     elements: {
       arc: {
-        borderWidth: 4,
-        
+        borderWidth: 2,        
       },
     },
     plugins: {
@@ -62,9 +71,7 @@ export class RemainingDebtComponent {
         formatter: (value: number) => {
           return `${value}%`
         },
-        
         backgroundColor: 'white',
-        anchor: 'end',
         padding: 4,
         font: {
           size: 9
@@ -79,10 +86,10 @@ export class RemainingDebtComponent {
     },
     layout: {
       padding: {
-        left: 13,
-        right: 13,
-        top: 13,
-        bottom: 13
+        top: 0,
+        right: 40,
+        bottom: 0,
+        left: 40,
       }
     }
   }

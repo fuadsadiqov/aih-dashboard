@@ -11,9 +11,12 @@
         gap: 1rem;
         .table-item{
             flex: 1;
+            
             h4{
+                font-size: 1.2rem;
                 padding-bottom: 0;
                 margin-bottom: 0;
+                padding: 0.2rem 1rem;
                 background-color: #eff4fc;
                 font-weight: 600;
             }
@@ -29,9 +32,6 @@
                 }
             }
         }
-    }
-    h3{
-        font-weight: 500;
     }
 }
 @media (max-width: 1150px){
