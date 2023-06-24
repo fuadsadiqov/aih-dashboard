@@ -1,5 +1,5 @@
-<!-- <div class="remaining-pie">
-        <h3>Remaining debt <span>k₼ | yearly</span></h3>
+<div class="remaining-pie">
+        <h3>{{name}} <span>k₼ | yearly</span></h3>
 <div class="wrapper">
         <div class="charts">
                 <span>1,345,455</span>
@@ -12,21 +12,21 @@
         </div>
        <div class="legends">
         <div>
-                <ng-container *ngFor="let item of firstPieChartLegend">
+                <ng-container *ngFor="let item of wrapper.children; let i = index">
                         <div class="legend">
-                            <div class="legend-box" ngClass={{item.backgroundColor}}></div>
-                            <span>{{item.legend}}</span>
+                            <div class="legend-box" [ngStyle]="{'border': '5px solid' + colorArray[i]}"></div>
+                            <span>{{item.title}}</span>
                         </div>
                 </ng-container>
         </div>
         <div>
-                <ng-container *ngFor="let item of secondPieChartLegend">
-                        <div class="legend">
-                            <div class="legend-box" ngClass={{item.backgroundColor}}></div>
-                            <span>{{item.legend}}</span>
-                        </div>
+                <ng-container *ngIf="wrapper">
+                        <!-- <div class="legend"  *ngFor="let item of wrapper?.children[0]?.children; let i = index">
+                            <div class="legend-box" [ngStyle]="{'border': '5px solid' + colorArray[i + 3]}"></div>
+                            <span>{{item.title}}</span>
+                        </div> -->
                 </ng-container>
         </div>
        </div>
 </div>
-</div> -->
+</div>

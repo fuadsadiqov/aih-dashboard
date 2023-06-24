@@ -16,9 +16,9 @@ import { CreditorComponent } from '../views/dashboard/creditor/creditor.componen
 import { RollingStockComponent } from '../views/dashboard/rolling-stock/rolling-stock.component';
 import { RemainingDebtComponent } from '../views/dashboard/remaining-debt/remaining-debt.component';
 import { RevenueBreakdownComponent } from '../views/dashboard/revenue-breakdown/revenue-breakdown.component';
-import { CashComponent } from '../views/dashboard/cash/cash.component';
-import { InflowComponent } from '../views/dashboard/inflow/inflow.component';
-import { OutflowComponent } from '../views/dashboard/outflow/outflow.component'
+import { CashComponent } from '../views/dashboard/operational/cash/cash.component';
+import { InflowComponent } from '../views/dashboard/operational/inflow/inflow.component';
+import { OutflowComponent } from '../views/dashboard/operational/outflow/outflow.component'
 
 @NgModule({
   declarations: [

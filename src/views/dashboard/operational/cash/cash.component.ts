@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ChartConfiguration, ChartData, ChartType } from 'chart.js';
 import { BaseChartDirective } from 'ng2-charts';
 import DataLabelsPlugin from 'chartjs-plugin-datalabels';
@@ -10,33 +10,27 @@ import { ResponseType } from 'src/interfaces/response.interface';
   templateUrl: './cash.component.html',
   styleUrls: ['./cash.component.scss']
 })
-export class CashComponent {
-  public name: string = ""
-  public item: ResponseType = {
-    title: '',
-    value: null,
-    children: []
-  }
-  itemChildrenTitle: string[] | any = []
-  itemChildrenValues: number[] | any = []
-
-  constructor(private restService: RestService){
-    this.restService.getData()
-    .subscribe((res: ResponseType[] | any) => {        
-      this.item = res.find((item: ResponseType) => item.title === "Cash movement");
-      this.name = this.item.title
-      this.itemChildrenTitle = this.item.children?.map((item: ResponseType) => item.title)
-      this.itemChildrenValues = this.item.children?.map((item: ResponseType) => item.value)
-      console.log(this.itemChildrenTitle);
-      console.log(this.itemChildrenValues);
-    })    
-  }
-  private colorArray = [ '#456CD7', '#A03D5F', '#6EB484']
+export class CashComponent implements OnInit{
+  public name: string = "Cash movement"
+  private colorArray = ['#456CD7', '#A03D5F', '#6EB484']
   public delayed: boolean = false
-  @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
 
+  public wrapper: ResponseType[] = []
+  constructor(private restService: RestService){}
+  ngOnInit(): void {
+    this.restService.getData(this.name)
+    .then((res: Array<ResponseType> | any) => {
+      this.wrapper = res.children
+      this.barChartData.labels = this.wrapper.map(item => item.title)
+      this.barChartData.datasets[0].data = this.wrapper.map(item => item.value)
+      this.chart?.update()
+    
+    })  
+  }
+  
+  @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
   public barChartOptions: ChartConfiguration['options'] = {
-    aspectRatio: 2.3,
+    // aspectRatio: 2.3,
     animation: {
       onComplete: () => {
         this.delayed = true;
@@ -97,12 +91,14 @@ export class CashComponent {
   public barChartPlugins = [
     DataLabelsPlugin
   ];
+  
   public barChartData: ChartData<'bar'> = {
-    labels: this.itemChildrenTitle,
+    labels: [],
     datasets: [
       { 
-        data: this.itemChildrenValues,
-        backgroundColor: this.colorArray},
+        data: [],
+        backgroundColor: this.colorArray
+      },
     ],
     
   };

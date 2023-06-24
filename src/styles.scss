@@ -40,36 +40,6 @@ ul{
             width: 1.4rem;
             height: 1.4rem;
             border-radius: 50%;
-            position: relative;
-            &::after{
-                display: block;
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-                content: "";
-                width: 0.6rem;
-                height: 0.6rem;
-                border-radius: 50%;
-            }
-        }
-        .blue{
-            border: 5px solid hsl(223.97deg 64.6% 55.69%);
-        }
-        .gray{
-            border: 5px solid #5bb5d1;
-        }
-        .lightgreen{
-            border: 5px solid #839be5;
-        }
-        .green{
-            border: 5px solid hsl(138.86deg 31.82% 56.86%);
-        }
-        .red{
-            border: 5px solid hsl(339.39deg 44.8% 43.33%);
-        }
-        .white{
-            border: 5px solid #FFF;
         }
     }
 }

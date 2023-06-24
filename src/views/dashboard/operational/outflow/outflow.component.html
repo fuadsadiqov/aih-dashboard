@@ -1,0 +1,20 @@
+<div class="outflow-pie">
+    <h3>Operational outflow <span>k₼ | yearly</span></h3>
+    <div class="charts">
+            <span>21,529</span>
+            <canvas baseChart class="chart"
+            [data]="doughnutChartData"
+            [options]="doughnutChartOptions"
+            [plugins]="doughnutChartPlugins"
+            [type]="doughnutChartType">
+            </canvas>
+    </div>
+<div class="legends">
+        <ng-container *ngFor="let item of wrapper.children; let i = index">
+                <div class="legend">
+                        <div class="legend-box" [ngStyle]="{'border': '5px solid' + colorArray[i]}"></div>
+                        <span>{{item.title}}</span>     
+                </div>
+        </ng-container>
+   </div>
+</div>

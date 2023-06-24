@@ -1,5 +1,5 @@
 export interface ResponseType{
     title: string
-    value: number | number[] | null
+    value: number
     children?: Array<ResponseType> 
 }
