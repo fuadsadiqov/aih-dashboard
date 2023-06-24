@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ResponseType } from 'src/interfaces/response.interface';
 import { RestService } from 'src/services/rest.service';
 
 @Component({
@@ -8,12 +9,16 @@ import { RestService } from 'src/services/rest.service';
 })
 export class TradeComponent implements OnInit{
   public nameArr: string[] = ["Cargo volume", "Import", "Export", "Transit", "Internal", "Passangers", "Employees"]
-  // public trades: any = data.find((item: any) => item.name === "Trade")?.value.slice(0, 6)
-  // public employees: any = data.find((item: any) => item.name === "Trade")?.value.slice(-1)
+  public wrapper: ResponseType[] | any = []
+  
+  public lastItemOfWrapper: ResponseType[] | undefined | any
   constructor(private restService: RestService){      
   } 
   ngOnInit(): void {
     this.restService.getMultipleData(this.nameArr)
-    .then(res => console.log(res))
+    .then((res: ResponseType[]) => {
+      this.wrapper = res.slice(0, res.length - 1)
+      this.lastItemOfWrapper = res.slice(res.length  - 1)
+    })
   }
 } 

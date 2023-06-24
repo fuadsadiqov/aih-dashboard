@@ -24,11 +24,7 @@ export class RestService {
     return new Promise((resolve, reject) => {
       this.http.get(this.baseUrl)
       .subscribe((res: Array<ResponseType> | any) => {
-        console.log(res);
-                
-        let foundObjects = res.filter((obj: ResponseType) => titleArr.forEach((item) => {
-          item.includes(obj.title)
-        }))
+        let foundObjects = res.filter((obj: ResponseType) => titleArr.includes(obj.title))
         resolve(foundObjects)
       }), (error: any) => {
         reject(error)

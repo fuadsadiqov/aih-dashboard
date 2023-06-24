@@ -1,7 +1,7 @@
 <div class="outflow-pie">
-    <h3>Operational outflow <span>k₼ | yearly</span></h3>
+    <h3>{{ name }} <span>k₼ | yearly</span></h3>
     <div class="charts">
-            <span>21,529</span>
+            <span>{{ wrapper.value | number }}</span>
             <canvas baseChart class="chart"
             [data]="doughnutChartData"
             [options]="doughnutChartOptions"

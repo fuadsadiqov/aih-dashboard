@@ -1,23 +1,23 @@
-<!-- <div class="trade">
+<div class="trade">
     <table>
         <thead>
              <tr>
-                <th *ngFor="let itemName of trades">
-                    {{itemName.name}}
+                <th *ngFor="let itemName of wrapper">
+                    {{itemName.title}}
                 </th>
             </tr>
          </thead>
         <tbody>
-            <tr>
-                <td *ngFor="let item of trades">
-                    <span>{{item.past | number }} k</span>
-                    <mat-icon class="trade-up" *ngIf="item.pastPercent > 0">arrow_drop_up</mat-icon>
-                    <mat-icon class="trade-down" *ngIf="item.pastPercent < 0">arrow_drop_down</mat-icon>
-                    <span>%{{item.pastPercent | number }}</span> | 
-                    <span>{{item.current | number }} k</span>
-                    <mat-icon class="trade-up" *ngIf="item.currentPercent > 0">arrow_drop_up</mat-icon>
-                    <mat-icon class="trade-down" *ngIf="item.currentPercent < 0">arrow_drop_down</mat-icon>
-                    <span>%{{item.currentPercent | number }}</span>
+            <tr *ngIf="wrapper.length != 0">
+                <td *ngFor="let item of wrapper">
+                    <span>{{ item.children[0].value[0] | number }} k</span>
+                    <mat-icon class="trade-up" *ngIf="item.children[0].value[1] > 0">arrow_drop_up</mat-icon>
+                    <mat-icon class="trade-down" *ngIf="item.children[0].value[1] < 0">arrow_drop_down</mat-icon>
+                    <span>%{{ item.children[0].value[1] | number }}</span> | 
+                    <span>{{ item.children[1].value[0] | number }} k</span>
+                    <mat-icon class="trade-up" *ngIf="item.children[1].value[1] > 0">arrow_drop_up</mat-icon>
+                    <mat-icon class="trade-down" *ngIf="item.children[1].value[1] < 0">arrow_drop_down</mat-icon>
+                    <span>%{{ item.children[1].value[1] | number }}</span>
                 </td>
             </tr>
         </tbody>
@@ -25,24 +25,24 @@
     <table class="employees">
         <thead>
              <tr>
-                <th *ngFor="let itemName of employees">
-                    {{itemName.name}}
+                <th *ngFor="let itemName of lastItemOfWrapper">
+                    {{itemName.title}}
                 </th>  
              </tr>
          </thead>
         <tbody>
-            <tr>
-                <td *ngFor="let item of employees">
-                    <span>{{item.past | number }} k</span>
-                    <mat-icon class="trade-up" *ngIf="item.pastPercent > 0">arrow_drop_up</mat-icon>
-                    <mat-icon class="trade-down" *ngIf="item.pastPercent < 0">arrow_drop_down</mat-icon>
-                    <span>%{{item.pastPercent | number }}</span> | 
-                    <span>{{item.current | number }} k</span>
-                    <mat-icon class="trade-up" *ngIf="item.currentPercent > 0">arrow_drop_up</mat-icon>
-                    <mat-icon class="trade-down" *ngIf="item.currentPercent < 0">arrow_drop_down</mat-icon>
-                    <span>%{{item.currentPercent | number }}</span>
+            <tr *ngIf="wrapper.length != 0">
+                <td *ngFor="let item of lastItemOfWrapper">
+                    <span>{{ item.children[0].value[0] | number }} k</span>
+                    <mat-icon class="trade-up" *ngIf="item.children[0].value[1] > 0">arrow_drop_up</mat-icon>
+                    <mat-icon class="trade-down" *ngIf="item.children[0].value[1] < 0">arrow_drop_down</mat-icon>
+                    <span>%{{ item.children[0].value[1] | number }}</span> | 
+                    <span>{{ item.children[1].value[0] | number }} k</span>
+                    <mat-icon class="trade-up" *ngIf="item.children[1].value[1] > 0">arrow_drop_up</mat-icon>
+                    <mat-icon class="trade-down" *ngIf="item.children[1].value[1] < 0">arrow_drop_down</mat-icon>
+                    <span>%{{ item.children[1].value[1] | number }}</span>
                 </td>
             </tr>
         </tbody>
      </table>
-</div> -->
+</div>

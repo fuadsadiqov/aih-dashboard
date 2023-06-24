@@ -2,7 +2,7 @@
         <h3>{{name}} <span>k₼ | yearly</span></h3>
 <div class="wrapper">
         <div class="charts">
-                <span>1,345,455</span>
+                <span>{{ wrapper.value | number }}</span>
                 <canvas baseChart class="chart"
                 [data]="doughnutChartData"
                 [options]="doughnutChartOptions"

@@ -18,7 +18,10 @@ import { RemainingDebtComponent } from '../views/dashboard/remaining-debt/remain
 import { RevenueBreakdownComponent } from '../views/dashboard/revenue-breakdown/revenue-breakdown.component';
 import { CashComponent } from '../views/dashboard/operational/cash/cash.component';
 import { InflowComponent } from '../views/dashboard/operational/inflow/inflow.component';
-import { OutflowComponent } from '../views/dashboard/operational/outflow/outflow.component'
+import { OutflowComponent } from '../views/dashboard/operational/outflow/outflow.component';
+import { CargoComponent } from '../views/dashboard/revenue-breakdown/cargo/cargo.component';
+import { PassangerComponent } from '../views/dashboard/revenue-breakdown/passanger/passanger.component';
+import { OtherComponent } from '../views/dashboard/revenue-breakdown/other/other.component'
 
 @NgModule({
   declarations: [
@@ -34,6 +37,9 @@ import { OutflowComponent } from '../views/dashboard/operational/outflow/outflow
     CashComponent,
     InflowComponent,
     OutflowComponent,
+    CargoComponent,
+    PassangerComponent,
+    OtherComponent,
   ],
   imports: [
     BrowserModule,

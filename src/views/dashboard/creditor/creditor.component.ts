@@ -1,4 +1,4 @@
-import { AfterContentChecked, Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ChartConfiguration, ChartData, ChartType } from 'chart.js';
 import { BaseChartDirective } from 'ng2-charts';
 import DataLabelsPlugin from 'chartjs-plugin-datalabels';
@@ -10,7 +10,7 @@ import { ResponseType } from 'src/interfaces/response.interface';
   templateUrl: './creditor.component.html',
   styleUrls: ['./creditor.component.scss']
 })
-export class CreditorComponent implements OnInit, AfterContentChecked{
+export class CreditorComponent implements OnInit{
   public name: string = 'Creditors balance'
   private wrapper: ResponseType[] = []
   private colorArray = [ '#456CD7', '#A03D5F', '#6EB484']
@@ -22,14 +22,10 @@ export class CreditorComponent implements OnInit, AfterContentChecked{
     this.restService.getData(this.name)
     .then((res) => {
       this.wrapper = res.children
-    })  
-  }
-  ngAfterContentChecked(): void {
-    if(this.wrapper.length != 0){
       this.barChartData.datasets[0].data = this.wrapper.map(item => item.value)
       this.barChartData.labels = this.wrapper.map(item => item.title)
       this.chart?.update()
-    }
+    })  
   }
   
   @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
