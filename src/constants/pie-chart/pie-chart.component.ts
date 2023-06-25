@@ -1,30 +1,24 @@
-import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, Input, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { ChartConfiguration, ChartData, ChartType } from 'chart.js';
 import { BaseChartDirective } from 'ng2-charts';
 import DataLabelsPlugin from 'chartjs-plugin-datalabels';
-import { RestService } from 'src/services/rest.service';
 import { ResponseType } from 'src/interfaces/response.interface';
 
 @Component({
-  selector: 'app-cargo',
-  templateUrl: './cargo.component.html',
-  styleUrls: ['./cargo.component.scss', '../revenue-breakdown.component.scss']
+  selector: 'app-pie-chart',
+  templateUrl: './pie-chart.component.html',
+  styleUrls: ['./pie-chart.component.scss']
 })
-export class CargoComponent implements OnInit{
-  public name: string = "Cargo"
-  public wrapper: ResponseType[] | any = []
+export class PieChartComponent implements OnInit{
+
+  @Input() wrapper: ResponseType[] | any = []
   public colorArray = ['#456CD7', '#A03D5F','#5bb5d1', '#839be5', '#6EB484', '#D3D3D3']
 
-  constructor(private restService: RestService){}
-  ngOnInit(): void {
-    this.restService.getData(this.name)
-    .then(res => {
-      this.wrapper = res
-      this.doughnutChartData.labels = this.wrapper.children.map((item: ResponseType) => item.title)
-      this.doughnutChartData.datasets[0].data = this.wrapper.children.map((item: ResponseType) => item.value)      
-      this.chart?.update()      
-    })
-  }
+  ngOnInit(){
+    this.doughnutChartData.labels = this.wrapper.children.map((child: ResponseType) => child.title)
+    this.doughnutChartData.datasets[0].data = this.wrapper.children.map((child: ResponseType) => child.value)
+    this.chart?.update()    
+  }  
   @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
   // Donught chart  
   public doughnutChartData: ChartData<'doughnut'> = {
@@ -36,7 +30,7 @@ export class CargoComponent implements OnInit{
       }
     ]
   };
- public doughnutChartPlugins = [
+  public doughnutChartPlugins = [
     DataLabelsPlugin
   ];
   public doughnutChartType: ChartType = 'doughnut';

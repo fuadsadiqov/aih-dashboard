@@ -1,0 +1,21 @@
+<div class="charts">
+    <div class="chart">
+        <div class="chart-value">
+            {{wrapper.value}}
+        </div>
+        <canvas baseChart class="chart"
+        [data]="doughnutChartData"
+        [plugins]="doughnutChartPlugins"
+        [options]="doughnutChartOptions"
+        [type]="doughnutChartType">
+    </canvas>
+    </div>
+<div class="legends">
+    <ng-container *ngFor="let item of wrapper.children;let i = index">
+            <div class="legend">
+                <div class="legend-box" [ngStyle]="{'border': '5px solid ' + colorArray[i]}"></div>
+                {{item.title}}
+            </div>
+        </ng-container>
+    </div>
+</div>

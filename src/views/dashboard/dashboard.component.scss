@@ -5,11 +5,8 @@
     .flex{
         display: flex;
         gap: 2rem;
-        .flex-1{
-            flex: 1;
-        }
         .flex-0{
-            max-width: 50rem;
+            max-width: 40rem;
             width: 100%;
             flex: 1;
         }
@@ -18,12 +15,13 @@
             width: 100%;
         }
         .creditor{
-            max-width: 40rem;
+            max-width: 30rem;
             width: 100%;
         }
         .operational{
             flex: 1;
             max-width: 40rem;
+            width: 100%;
         }
         @media (max-width: 1400px){
             .operational{

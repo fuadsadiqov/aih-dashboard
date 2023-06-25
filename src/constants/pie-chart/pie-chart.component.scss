@@ -1,0 +1,30 @@
+.chart{
+    position: relative;
+    .chart-value{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+    @media (max-width: 1400px) {
+    .pie{
+        max-width: 15rem;
+        margin-right: 0;
+    }
+}
+@media (max-width: 1200px) {
+    .pie{
+        max-width: 10rem;
+    }
+}
+.legends{
+    grid-template-columns: repeat(auto-fit, minmax(50px, 0.5fr));
+    gap: 0.1rem;
+    max-height: 6.5rem;
+    .legend-box{
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+    }
+}

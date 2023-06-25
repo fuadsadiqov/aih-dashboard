@@ -19,9 +19,8 @@ import { RevenueBreakdownComponent } from '../views/dashboard/revenue-breakdown/
 import { CashComponent } from '../views/dashboard/operational/cash/cash.component';
 import { InflowComponent } from '../views/dashboard/operational/inflow/inflow.component';
 import { OutflowComponent } from '../views/dashboard/operational/outflow/outflow.component';
-import { CargoComponent } from '../views/dashboard/revenue-breakdown/cargo/cargo.component';
-import { PassangerComponent } from '../views/dashboard/revenue-breakdown/passanger/passanger.component';
-import { OtherComponent } from '../views/dashboard/revenue-breakdown/other/other.component'
+import { PieChartComponent } from '../constants/pie-chart/pie-chart.component';
+import { BarChartComponent } from '../constants/bar-chart/bar-chart.component'
 
 @NgModule({
   declarations: [
@@ -37,9 +36,8 @@ import { OtherComponent } from '../views/dashboard/revenue-breakdown/other/other
     CashComponent,
     InflowComponent,
     OutflowComponent,
-    CargoComponent,
-    PassangerComponent,
-    OtherComponent,
+    PieChartComponent,
+    BarChartComponent
   ],
   imports: [
     BrowserModule,

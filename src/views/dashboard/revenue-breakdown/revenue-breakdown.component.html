@@ -1,8 +1,13 @@
 <div class="revenue">
     <h3>{{ name }} <span>k₼ | yearly</span></h3>
    <div class="pies">
-        <app-cargo></app-cargo>
-        <app-passanger></app-passanger>
-        <app-other></app-other>
+        <ng-container *ngFor="let item of wrapper">
+            <div class="pie">
+                <div class="charts">
+                    <div *ngIf="item"><app-pie-chart [wrapper]="item"></app-pie-chart></div>
+                </div>
+                <div class="pieChartName">{{item.title}}</div>
+            </div>
+        </ng-container>
     </div>
-</div>
+</div>  

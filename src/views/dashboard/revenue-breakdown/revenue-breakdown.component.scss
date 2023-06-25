@@ -15,38 +15,42 @@
             color: #CCC;
         }
     }
-}
-.pies{
-    display: flex;
-    justify-content: space-evenly;
-}
-.pie{
-    max-width: 17rem;
-    width: 100%;
-    margin-right: 1rem;
-}
-@media (max-width: 1400px) {
-    .pie{
-        max-width: 15rem;
-        margin-right: 0;
+    .pies{
+        display: flex;
+        justify-content: space-evenly;
+        .pie{
+            max-width: 17rem;
+            width: 100%;
+            margin-right: 1rem;
+            .charts{
+                position: relative;
+                .chart-value{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+        @media (max-width: 1400px) {
+            .pie{
+                max-width: 15rem;
+                margin-right: 0;
+            }
+        }
+        @media (max-width: 1200px) {
+            .pie{
+                max-width: 10rem;
+            }
+        }
+        .pieChartName{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            background-color: #eff4fc;
+            padding: 0.2rem 0.5rem;
+            margin-top: 1rem;
+        }
+
     }
-}
-@media (max-width: 1200px) {
-    .pie{
-        max-width: 10rem;
-    }
-}
-.pieChartName{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    background-color: #eff4fc;
-    padding: 0.2rem 0.5rem;
-    margin-top: 1rem;
-}
-.legends{
-    grid-template-columns: repeat(auto-fit, minmax(50px, 0.5fr));
-    gap: 0.1rem;
-    max-height: 6.5rem;
-    height: 100%;
 }
