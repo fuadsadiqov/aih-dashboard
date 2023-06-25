@@ -4,24 +4,38 @@
     width: 100%;
     .flex{
         display: flex;
-        gap: 2rem;
-        .flex-0{
-            max-width: 40rem;
+        gap: 1.5rem;
+        .flex{
             width: 100%;
-            flex: 1;
-        }
-        .remaining{
-            max-width: 30rem;
-            width: 100%;
-        }
-        .creditor{
-            max-width: 30rem;
-            width: 100%;
-        }
-        .operational{
-            flex: 1;
-            max-width: 40rem;
-            width: 100%;
+            display: flex;
+            flex-direction: column;
+            height: max-content;
+            .operational{
+                max-width: 50rem;
+                width: 100%;
+            }
+            .creditor-and-rolling{
+                display: flex;
+                gap: 1.5rem;
+                flex: 1;
+                .creditor{
+                    width: 100%;
+                    max-width: 40rem;
+                    flex: 1;
+                }
+                .rolling{
+                    width: 100%;
+                    flex: 1;
+                }
+            }
+            .remaining-revenue{
+                display: flex;
+                gap: 1.5rem;
+                width: 100%;
+                .revenue{
+                    width: 80%;
+                }
+            }
         }
         @media (max-width: 1400px){
             .operational{

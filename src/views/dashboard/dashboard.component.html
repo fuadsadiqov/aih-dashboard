@@ -27,13 +27,15 @@
         <div class="operational">
             <app-operational></app-operational>
         </div>
-            <div class="flex-0">
-                <div class="creditor"><app-creditor></app-creditor></div>
-                <div class="remaining"><app-remaining-debt></app-remaining-debt></div>
+        <div class="flex">
+            <div class="creditor-and-rolling">
+                <app-creditor class="creditor"></app-creditor>
+                <app-rolling-stock class="rolling"></app-rolling-stock>
             </div>
-            <div class="flex-1">
-                <app-rolling-stock></app-rolling-stock>
-                <app-revenue-breakdown></app-revenue-breakdown>    
+            <div class="remaining-revenue">
+                <app-remaining-debt class="remaining"></app-remaining-debt>
+                <app-revenue-breakdown class="revenue"></app-revenue-breakdown>    
             </div>
+        </div>
     </div>
 </div>

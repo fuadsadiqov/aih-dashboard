@@ -1,7 +1,7 @@
 <div class="charts">
     <div class="chart">
         <div class="chart-value">
-            {{wrapper.value}}
+            {{wrapper.value | number }}
         </div>
         <canvas baseChart class="chart"
         [data]="doughnutChartData"
