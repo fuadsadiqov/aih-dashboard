@@ -102,31 +102,31 @@
         "value": null,
         "children": [
             {
-                "title": ["Opening balance"],
+                "title": ["Opening", " balance"],
                 "value": [15, 40]
             },
             {
-                "title": ["Operating inflow"],
+                "title": ["Operating", " inflow"],
                 "value": [40, 60]
             },
             {
-                "title": ["Financing activities"],
+                "title": ["Financing", " activities"],
                 "value": [25, 50]
             },
             {
-                "title": ["Operating outflow"],
+                "title": ["Operating", " outflow"],
                 "value": [8, 33]
             },
             {
-                "title": ["FX difference"],
+                "title": ["FX", " difference"],
                 "value": [60, 70]
             },
             {
-                "title": ["Investing activities"],
+                "title": ["Investing", " activities"],
                 "value": [60, 85]
             },
             {
-                "title": ["Cash balance"],
+                "title": ["Cash", " balance"],
                 "value": [0, 55]
             }
         ]
@@ -180,15 +180,15 @@
         "value": null,
         "children": [
             {
-                "title": "Opening balance",
+                "title": ["Opening", " balance"],
                 "value": [0, 80]  
             },
             {
-                "title": "Accured credit",
+                "title": ["Accured", " credit"],
                 "value": [40, 65]
             },
             {
-                "title": "Paid credit",
+                "title": ["Paid", " credit"],
                 "value": [10, 25]
             },
             {
@@ -196,7 +196,7 @@
                 "value": [75, 84]
             },
             {
-                "title": "Closing balance",
+                "title": ["Closing", " balance"],
                 "value": [0, 90]
             }
         ]
@@ -283,7 +283,7 @@
             "title": "Cargo",
             "value": 322965,
             "children": [
-                {
+                {   
                     "title": "transit",
                     "value": 25
                 },

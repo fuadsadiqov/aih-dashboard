@@ -2,6 +2,7 @@
     max-width: 40rem;
     margin-top: 1rem;
     background-color: #FFF;
+    padding: 0.5rem;
     box-shadow: 0.3rem 1rem 2.1rem -1.8rem rgba(0,0,0,0.75);
     .wrapper{
         display: flex;
@@ -31,8 +32,14 @@
         .legends{
             padding-top: 0;
             display: flex;
-            justify-content: center;
             gap: 0.5rem;
+            justify-content: center;
+            & > div{
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 0.8rem;
+            }
             .legend{
                 span{
                     white-space: normal;
