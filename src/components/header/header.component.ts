@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RestService } from 'src/services/rest.service';
 
 @Component({
   selector: 'app-header',

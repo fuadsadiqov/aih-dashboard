@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ResponseType } from 'src/interfaces/response.interface';
+import { RestService } from 'src/services/rest.service';
 
 @Component({
   selector: 'app-operational',
@@ -6,9 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./operational.component.scss'],
 })
 export class OperationalComponent{
+  private nameArr: string[] = ["Operational inflow", "Operational outflow"]
+  public wrapper: ResponseType[] = []
 
-  constructor(){
-    
+  constructor(private restService: RestService){
+    this.restService.getMultipleData(this.nameArr)
+    .then(res => this.wrapper = res)
   }
-  
 }

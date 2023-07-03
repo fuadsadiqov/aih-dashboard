@@ -1,20 +1,11 @@
 .operational{
-    padding: 0 1rem 1rem 1rem;
+    padding: 0 1rem 3rem 1rem;
     margin-bottom: 1rem;
     width: 100%;
     background-color: #FFF;
     box-shadow: 0.3rem 1rem 2.1rem -1.8rem rgba(0,0,0,0.75);
     .chart-box{
         width: 100%;
-    }
-    .pie{
-        display: flex;
-        justify-content: space-evenly;
-        .inflow-pie,
-        .outflow-pie{
-            max-width: 25rem;
-            width: 50%;
-        }
     }
     .charts{
         position: relative;
@@ -25,6 +16,33 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+        }
+    }
+    .pies{
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 1.4rem;
+        .pie{
+            padding: 0 2rem;
+            max-width: 20rem;
+            width: 100%;
+        }
+        @media (max-width: 1300px) {
+            .pie{
+                max-width: 17rem;
+                padding-bottom: 1rem;
+            }
+        }
+        h2{
+            padding: 0.5rem 1rem;
+            margin-bottom: 0;
+            display: inline-block;
+            text-align: left;
+            font-weight: 500;
+            font-size: 1.5rem;
+            span{
+                color: #CCC;
+            }
         }
     }
 }

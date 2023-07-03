@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OutflowComponent } from './outflow.component';
+import { StatementsComponent } from './statements.component';
 
-describe('OutflowComponent', () => {
-  let component: OutflowComponent;
-  let fixture: ComponentFixture<OutflowComponent>;
+describe('StatementsComponent', () => {
+  let component: StatementsComponent;
+  let fixture: ComponentFixture<StatementsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OutflowComponent ]
+      declarations: [ StatementsComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(OutflowComponent);
+    fixture = TestBed.createComponent(StatementsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

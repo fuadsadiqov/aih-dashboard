@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes, ActivatedRoute } from '@angular/router'
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -17,10 +18,21 @@ import { RollingStockComponent } from '../views/dashboard/rolling-stock/rolling-
 import { RemainingDebtComponent } from '../views/dashboard/remaining-debt/remaining-debt.component';
 import { RevenueBreakdownComponent } from '../views/dashboard/revenue-breakdown/revenue-breakdown.component';
 import { CashComponent } from '../views/dashboard/operational/cash/cash.component';
-import { InflowComponent } from '../views/dashboard/operational/inflow/inflow.component';
-import { OutflowComponent } from '../views/dashboard/operational/outflow/outflow.component';
 import { PieChartComponent } from '../constants/pie-chart/pie-chart.component';
-import { BarChartComponent } from '../constants/bar-chart/bar-chart.component'
+import { BarChartComponent } from '../constants/bar-chart/bar-chart.component';
+import { SupervisoryBoardComponent } from '../views/supervisory-board/supervisory-board.component';
+import { StatementsComponent } from '../views/statements/statements.component';
+import { DiagnosticsComponent } from '../views/diagnostics/diagnostics.component';
+import { ActionPlanComponent } from '../views/action-plan/action-plan.component'
+
+const routes: Routes = [
+  { path: '', component: DashboardComponent},
+  { path: 'dashboard', component: DashboardComponent},
+  { path: 'supervisory-board', component: SupervisoryBoardComponent},
+  { path: 'statements', component: StatementsComponent},
+  { path: 'diagnostics', component: DiagnosticsComponent},
+  { path: 'action-plan', component: ActionPlanComponent},
+]
 
 @NgModule({
   declarations: [
@@ -34,18 +46,22 @@ import { BarChartComponent } from '../constants/bar-chart/bar-chart.component'
     RemainingDebtComponent,
     RevenueBreakdownComponent,
     CashComponent,
-    InflowComponent,
-    OutflowComponent,
     PieChartComponent,
-    BarChartComponent
+    BarChartComponent,
+    SupervisoryBoardComponent,
+    StatementsComponent,
+    DiagnosticsComponent,
+    ActionPlanComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     NgChartsModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routes),
   ],
+  exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent]
 })

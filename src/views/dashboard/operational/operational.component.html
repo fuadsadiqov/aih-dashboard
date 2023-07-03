@@ -1,7 +1,11 @@
 <div class="operational">
         <div class="chart-box"><app-cash></app-cash></div>
-       <div class="pie">
-        <div class="inflow-pie"><app-inflow></app-inflow></div>
-        <div class="outflow-pie"><app-outflow></app-outflow></div>
+       <div class="pies">
+                <ng-container *ngFor="let item of wrapper">
+                        <div class="pie">
+                                <h2>{{item.title}} <span>k₼ | yearly</span></h2>
+                               <app-pie-chart [wrapper]="item"></app-pie-chart>
+                        </div>
+                </ng-container>
        </div>
 </div>

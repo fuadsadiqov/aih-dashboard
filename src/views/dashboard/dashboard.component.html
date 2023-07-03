@@ -2,9 +2,9 @@
     <div class="legend">
         <div class="left">
             <ul>
-                <li>Operational</li>
-                <li>KPI</li>
-                <li>Financial</li>
+                <li (click)="addQuery('operational')">Operational</li>
+                <li (click)="addQuery('kpi')">KPI</li>
+                <li (click)="addQuery('financial')">Financial</li>
             </ul>
         </div>
         <div class="right">

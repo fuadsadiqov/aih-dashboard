@@ -12,20 +12,20 @@
         </div>
        <div class="legends">
         <div>
-                <ng-container *ngFor="let item of wrapper.children; let i = index">
-                        <div class="legend">
-                            <div class="legend-box" [ngStyle]="{'border': '5px solid' + colorArray[i]}"></div>
-                            <span>{{item.title}}</span>
-                        </div>
-                </ng-container>
+           <ng-container *ngFor="let item of wrapper.children; let i = index">
+                   <div class="legend">
+                           <div class="legend-box" [ngStyle]="{'border': '5px solid' + colorArray[i]}"></div>
+                           <span>{{item.title}}</span>
+                   </div>
+           </ng-container>
         </div>
         <div>
-                <ng-container *ngIf="wrapper">
-                        <div class="legend"  *ngFor="let item of wrapper?.children[0]?.children; let i = index">
-                            <div class="legend-box" [ngStyle]="{'border': '5px solid' + colorArray[i + 3]}"></div>
-                            <span>{{item.title}}</span>
-                        </div>
-                </ng-container>
+           <ng-container *ngIf="wrapper">
+                   <div class="legend"  *ngFor="let item of wrapper?.children[0]?.children; let i = index">
+                           <div class="legend-box" [ngStyle]="{'border': '5px solid' + colorArray[i + 3]}"></div>
+                           <span>{{item.title}}</span>
+                   </div>
+           </ng-container>
         </div>
        </div>
 </div>
