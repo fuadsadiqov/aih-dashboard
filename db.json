@@ -103,31 +103,31 @@
         "children": [
             {
                 "title": ["Opening", " balance"],
-                "value": [15, 40]
+                "value": 62314
             },
             {
                 "title": ["Operating", " inflow"],
-                "value": [40, 60]
+                "value": 35123
             },
             {
                 "title": ["Financing", " activities"],
-                "value": [25, 50]
+                "value": 89381
             },
             {
                 "title": ["Operating", " outflow"],
-                "value": [8, 33]
+                "value": -31234
             },
             {
                 "title": ["FX", " difference"],
-                "value": [60, 70]
+                "value": -223
             },
             {
                 "title": ["Investing", " activities"],
-                "value": [60, 85]
+                "value": -32434
             },
             {
                 "title": ["Cash", " balance"],
-                "value": [0, 55]
+                "value": 234546
             }
         ]
     },   

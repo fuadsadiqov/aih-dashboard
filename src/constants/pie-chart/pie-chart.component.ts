@@ -23,7 +23,7 @@ export class PieChartComponent implements OnInit{
       this.doughnutChartData.datasets[1].circumference = Math.round((360 * this.wrapper.children[0].value) / 100)
     }
     this.secondLegend = this.wrapper.children[0].children
-    this.chart?.update()    
+    this.chart?.update()
   }  
   @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
   // Donught chart  
@@ -38,8 +38,8 @@ export class PieChartComponent implements OnInit{
       {
         data: [],
         backgroundColor: this.colorArray.slice(-3),
-        weight: 2
-      },
+        weight: 2,
+      }
     ]
   };
   public doughnutChartPlugins = [

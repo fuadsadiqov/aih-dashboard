@@ -1,4 +1,4 @@
-import { AfterContentChecked, Component, Input, OnChanges, SimpleChanges, ViewChild } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges, ViewChild } from '@angular/core';
 import { ChartConfiguration, ChartData, ChartType } from 'chart.js';
 import { BaseChartDirective } from 'ng2-charts';
 import DataLabelsPlugin from 'chartjs-plugin-datalabels';
@@ -11,8 +11,7 @@ import { ResponseType } from 'src/interfaces/response.interface';
 })
 export class BarChartComponent implements OnChanges{
   @Input() wrapper: ResponseType[] | any = []  
-  public colorArray = ['#456CD7', '#A03D5F', '#6EB484']
-
+  
   ngOnChanges(changes: SimpleChanges | any): void {
     if(changes.wrapper.currentValue.length != 0){
       this.barChartData.labels = this.wrapper.children.map((item: ResponseType) => item.title)
@@ -31,39 +30,57 @@ export class BarChartComponent implements OnChanges{
           font: function(context) {
             var width = context.chart.width;
             var size = Math.round(width / 45);
-
             return {
                 size: size
             };
         },
           color: '#BBB'
         },
-    
         grid: {
           display: false, // Hide y-axis grid lines
         }, 
-        // stacked: true,
        },
       y: { 
         display: false, 
         stacked: true,
         min: 0,
-        max: 100,
+        // max: 100000,
       }
     },
     plugins: {
       legend: {
         display: false,
       },
+      tooltip: {
+        callbacks: {
+          
+        }
+      },
       datalabels: {
         anchor: 'end',
-        align: 'end'
+        align: 'end',
+        formatter(value, context) {
+          console.log("Previous: ", context.dataset.data[context.dataIndex - 1]);
+          console.log("Current:", context.dataset.data[context.dataIndex]);
+        },
       },
     },
     elements: {
       bar: {
-        borderWidth: 0
-      }
+        borderWidth: 0,
+        backgroundColor(ctx: any) {
+          if((ctx.chart.data.datasets[0].data.length - 1) - ctx.dataIndex == 0 || ctx.dataIndex == 0){
+            ctx.chart.options.backgroundColor = '#456CD7' 
+            return ctx.chart.options.backgroundColor = '#456CD7'
+          }
+          else if(ctx.raw > 0){
+            return ctx.chart.options.backgroundColor = '#6EB484' 
+          }
+          else{          
+            return ctx.chart.options.backgroundColor = '#A03D5F'
+          }
+        },
+      },
     },
   };
   public barChartType: ChartType = 'bar';
@@ -75,8 +92,7 @@ export class BarChartComponent implements OnChanges{
     labels: [],
     datasets: [
       { 
-        data: [],
-        backgroundColor: this.colorArray
+        data: []
       },
     ],
     
