@@ -22,7 +22,6 @@ export class BarChartComponent implements OnChanges{
   }
   @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
   public barChartOptions: ChartConfiguration['options'] = {
-    // aspectRatio: 2.3,
     scales: {
       x: {
         display: true, 

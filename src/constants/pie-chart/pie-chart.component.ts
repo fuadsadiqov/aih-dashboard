@@ -13,10 +13,16 @@ export class PieChartComponent implements OnInit{
 
   @Input() wrapper: ResponseType[] | any = []
   public colorArray = ['#456CD7', '#A03D5F','#5bb5d1', '#839be5', '#6EB484', '#D3D3D3']
+  secondLegend: ResponseType[] = []
 
   ngOnInit(){
     this.doughnutChartData.labels = this.wrapper.children.map((child: ResponseType) => child.title)
     this.doughnutChartData.datasets[0].data = this.wrapper.children.map((child: ResponseType) => child.value)
+    if(this.wrapper.children[0].children){
+      this.doughnutChartData.datasets[1].data = this.wrapper.children[0].children.map((item: ResponseType) => item.value)
+      this.doughnutChartData.datasets[1].circumference = Math.round((360 * this.wrapper.children[0].value) / 100)
+    }
+    this.secondLegend = this.wrapper.children[0].children
     this.chart?.update()    
   }  
   @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
@@ -26,8 +32,14 @@ export class PieChartComponent implements OnInit{
     datasets: [
       {
         data: [],
-        backgroundColor: this.colorArray
-      }
+        backgroundColor: this.colorArray,
+        weight: 5
+      },
+      {
+        data: [],
+        backgroundColor: this.colorArray.slice(-3),
+        weight: 2
+      },
     ]
   };
   public doughnutChartPlugins = [

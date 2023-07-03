@@ -1,32 +1,7 @@
 <div class="remaining-pie">
         <h3>{{name}} <span>k₼ | yearly</span></h3>
 <div class="wrapper">
-        <div class="charts">
-                <span>{{ wrapper.value | number }}</span>
-                <canvas baseChart class="chart"
-                [data]="doughnutChartData"
-                [options]="doughnutChartOptions"
-                [plugins]="doughnutChartPlugins"
-                [type]="doughnutChartType">
-        </canvas>
+        <div *ngIf="wrapper.length != 0">
+                <app-pie-chart [wrapper]="wrapper"></app-pie-chart>
         </div>
-       <div class="legends">
-        <div>
-           <ng-container *ngFor="let item of wrapper.children; let i = index">
-                   <div class="legend">
-                           <div class="legend-box" [ngStyle]="{'border': '5px solid' + colorArray[i]}"></div>
-                           <span>{{item.title}}</span>
-                   </div>
-           </ng-container>
-        </div>
-        <div>
-           <ng-container *ngIf="wrapper">
-                   <div class="legend"  *ngFor="let item of wrapper?.children[0]?.children; let i = index">
-                           <div class="legend-box" [ngStyle]="{'border': '5px solid' + colorArray[i + 3]}"></div>
-                           <span>{{item.title}}</span>
-                   </div>
-           </ng-container>
-        </div>
-       </div>
-</div>
 </div>

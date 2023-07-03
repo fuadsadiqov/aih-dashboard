@@ -39,10 +39,15 @@
         }
         @media (max-width: 1400px){
             .operational{
-                width: 30rem;
+                max-width: 30rem;
             }
             .flex-0{
                 width: 30rem;
+            }
+            .creditor-and-rolling{
+                .creditor{
+                    max-width: 30rem;
+                }
             }
         }
         @media (max-width: 1200px){

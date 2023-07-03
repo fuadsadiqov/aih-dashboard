@@ -4,16 +4,6 @@
     padding: 0.5rem 1rem 2.5rem 1rem;
     background-color: #FFF;
     box-shadow: 0.3rem 1rem 2.1rem -1.8rem rgba(0,0,0,0.75);
-    h3{
-        padding: 0.4rem 0.5rem;
-        display: inline-block;
-        text-align: left;
-        font-weight: 500;
-        font-size: 1.5rem;
-        span{
-            color: #CCC;
-        }
-    }
     .pies{
         display: flex;
         justify-content: space-evenly;
@@ -39,7 +29,7 @@
         }
         @media (max-width: 1200px) {
             .pie{
-                max-width: 10rem;
+                max-width: 12rem;
             }
         }
         .pieChartName{

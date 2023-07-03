@@ -17,5 +17,13 @@
                 {{item.title}}
             </div>
         </ng-container>
+        <div class="legends" *ngIf="this.wrapper.children[0].children">
+            <ng-container *ngFor="let item of secondLegend;let i = index">
+                <div class="legend">
+                    <div class="legend-box" [ngStyle]="{'border': '5px solid ' + colorArray[i + 3]}"></div>
+                    {{item.title}}
+                </div>
+            </ng-container>
+        </div>
     </div>
 </div>

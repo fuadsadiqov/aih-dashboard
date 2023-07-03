@@ -1,5 +1,12 @@
+.charts{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
 .chart{
     position: relative;
+    max-width: 18rem;
     .chart-value{
         position: absolute;
         top: 50%;
@@ -8,19 +15,20 @@
     }
 }
     @media (max-width: 1400px) {
-    .pie{
+    .pie, .chart{
         max-width: 15rem;
         margin-right: 0;
     }
 }
 @media (max-width: 1200px) {
-    .pie{
-        max-width: 10rem;
+    .pie, .chart{
+        max-width: 12rem;
     }
 }
 .legends{
     gap: 0.4rem;
-    height: 5rem;
+    // max-height: 5rem;
+    justify-content: center;
     .legend-box{
         width: 1.5rem;
         height: 1.5rem;

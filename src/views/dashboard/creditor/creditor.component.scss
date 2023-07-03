@@ -4,9 +4,6 @@
     box-shadow: 0.3rem 1rem 2.1rem -1.8rem rgba(0,0,0,0.75);
     background-color: #FFF;
     height: 22.5rem;
-    .chart{
-        padding-top: 3rem;
-    }
     h3{
         font-size: 1.5rem;
         font-weight: 500;
@@ -19,6 +16,6 @@
 }
 @media (max-width: 1400px){
     .chart-box{
-        height: max-content;
+        max-width: 30rem;
     }
 }

@@ -10,30 +10,29 @@ export class DashboardComponent {
   public activeTime: string | any = localStorage.getItem('time') ? localStorage.getItem('time') : 'yearly' 
   public activeOption: string | any = localStorage.getItem('query') ? localStorage.getItem('query') : 'operational'
   public activeMonth: string | any = localStorage.getItem('month') ? localStorage.getItem('month') : 'september'
+
   constructor(private route: ActivatedRoute, private router: Router){
-    console.log(this.activeOption);
     this.addQuery(this.activeOption)
     this.addTime(this.activeTime)
-    this.addMonth(this.activeMonth)
-    
+    this.addMonth(this.activeMonth)    
   }
-  addQuery(option: string){
-    localStorage.setItem('query', option)
-    this.activeOption = option
-    this.router.navigate([], {
-      relativeTo: this.route, 
-      queryParams: {option: option},
-      queryParamsHandling: 'merge'
-    })
-  }
-  addTime(time: string){
-    localStorage.setItem('time', time)
-    this.activeTime = time
+  addQuery(value: string){
+    localStorage.setItem('query', value)
     this.router.navigate([], {
       relativeTo: this.route,
-      queryParams: {date: time},
+      queryParams: {option: value},
       queryParamsHandling: 'merge'
-    })
+    })  
+    this.activeOption = value
+  }
+  addTime(value: string){
+    localStorage.setItem('time', value)
+    this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: {time: value},
+      queryParamsHandling: 'merge'
+    })  
+    this.activeTime = value
   }
   addMonth(value: string){
     localStorage.setItem('month', value)
@@ -41,6 +40,7 @@ export class DashboardComponent {
       relativeTo: this.route,
       queryParams: {month: value},
       queryParamsHandling: 'merge'
-    })
+    })  
+    this.activeMonth = value
   }
 }

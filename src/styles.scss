@@ -28,13 +28,14 @@ ul{
     list-style: none;
 }
 .legends{
-    // display: grid;
-    // grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
     display: flex;
     flex-wrap: wrap;
     padding-top: 2rem;
     font-size: 0.9rem;
     gap: 0.8rem;
+    .legends{
+        padding-top: 0;
+    }
     .legend{
         display: flex;
         gap: 0.5rem;
@@ -55,6 +56,16 @@ ul{
             left: 50%;
             transform: translate(-50%, -50%);
         }
+}
+h3{
+    padding: 0.4rem 0.5rem;
+    display: inline-block;
+    text-align: left;
+    font-weight: 500;
+    font-size: 1.5rem;
+    span{
+        color: #CCC;
+    }
 }
 @media (max-width: 1400px){
     .charts{
