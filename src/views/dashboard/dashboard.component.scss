@@ -62,7 +62,7 @@
                     font-size: 1.6rem;
                     font-weight: bold;
                     cursor: pointer;
-                    &:first-child{
+                    &.active{
                         color: #456CD9;
                         &::after{
                             display: block;
