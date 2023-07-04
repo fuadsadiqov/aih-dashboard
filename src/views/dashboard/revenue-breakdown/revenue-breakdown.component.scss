@@ -1,9 +1,12 @@
 .revenue{
     width: 100%;
     margin-top: 1rem;
-    padding: 0.5rem 1rem 2.5rem 1rem;
+    padding: 0.5rem 1rem 1rem 1rem;
     background-color: #FFF;
     box-shadow: 0.3rem 1rem 2.1rem -1.8rem rgba(0,0,0,0.75);
+    h3{
+        font-weight: 500;
+    }
     .pies{
         display: flex;
         justify-content: space-evenly;
@@ -38,7 +41,7 @@
             text-align: center;
             background-color: #eff4fc;
             padding: 0.2rem 0.5rem;
-            margin-top: 2.5rem;
+            margin-top: 1rem;
         }
 
     }

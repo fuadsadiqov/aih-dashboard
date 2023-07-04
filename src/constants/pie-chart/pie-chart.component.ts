@@ -21,9 +21,13 @@ export class PieChartComponent implements OnInit{
     if(this.wrapper.children[0].children){
       this.doughnutChartData.datasets[1].data = this.wrapper.children[0].children.map((item: ResponseType) => item.value)
       this.doughnutChartData.datasets[1].circumference = Math.round((360 * this.wrapper.children[0].value) / 100)
+      this.secondLegend = this.wrapper.children[0].children
+      this.chart?.update()
     }
-    this.secondLegend = this.wrapper.children[0].children
-    this.chart?.update()
+    else{
+      this.doughnutChartData.datasets.splice(1, 1)
+      this.chart?.update()
+    }
   }  
   @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
   // Donught chart  
@@ -69,8 +73,8 @@ export class PieChartComponent implements OnInit{
         },
         borderWidth: 2,
         borderRadius: 4,
-        borderColor(context: any) {          
-          const borderColor = context.chart.data.datasets[0].backgroundColor[context.dataIndex];
+        borderColor(context: any) {
+          let borderColor = context.chart.data.datasets.map((item: any) => item.backgroundColor[context.dataIndex])
           return borderColor;
         },
       },

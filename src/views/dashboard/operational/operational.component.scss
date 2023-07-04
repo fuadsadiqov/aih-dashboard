@@ -2,6 +2,7 @@
     padding: 0 1rem 1rem 1rem;
     margin-bottom: 1rem;
     width: 100%;
+    max-width: 38rem;
     background-color: #FFF;
     box-shadow: 0.3rem 1rem 2.1rem -1.8rem rgba(0,0,0,0.75);
     .chart-box{
@@ -24,7 +25,7 @@
         padding-top: 1.4rem;
         .pie{
             padding: 0 2rem;
-            max-width: 20rem;
+            max-width: 19rem;
             width: 100%;
         }
         @media (max-width: 1300px) {
