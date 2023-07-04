@@ -127,7 +127,7 @@
             },
             {
                 "title": ["Cash", " balance"],
-                "value": 234546
+                "value": 0
             }
         ]
     },   
@@ -181,23 +181,23 @@
         "children": [
             {
                 "title": ["Opening", " balance"],
-                "value": [0, 80]  
+                "value": 245565  
             },
             {
                 "title": ["Accured", " credit"],
-                "value": [40, 65]
+                "value": -42123
             },
             {
                 "title": ["Paid", " credit"],
-                "value": [10, 25]
+                "value": 80345
             },
             {
                 "title": "Adjustment",
-                "value": [75, 84]
+                "value": -2365
             },
             {
                 "title": ["Closing", " balance"],
-                "value": [0, 90]
+                "value": null
             }
         ]
     },
